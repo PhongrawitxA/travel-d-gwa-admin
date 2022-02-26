@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&display=swap');
+
+h1 {
+    margin: 0;
+    padding: 30px 0 20px 0;
+    color: #1D3557;
+    display: grid;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    height: 100%;
+    width: 320px;
+    background-color: #FFFFFF;
+    box-shadow: 10px 0 50px 0 rgba(0, 0, 0, 0.4);
+}
+
+.SidebarList {
+    height: auto;
+    width: 100%;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    row-gap: 15px;
+}
+
+.SidebarList .row {
+    width: 260px;
+    height: 54px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    color: #827E7E;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.SidebarList .row:hover {
+    cursor: pointer;
+    background-color: #ECFAFF;
+}
+
+.SidebarList #active{
+    background-color: #1D3557;
+    color: #FFFFFF;
+}
+
+.row #icon {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+
+.row #title {
+    flex: 70%;
+    font-size: 18px;
+}
