@@ -21,7 +21,7 @@ export default function LogIn() {
         url: "http://localhost:8080/admin/signin",
       }).then( res => {
         if(res.status === 200){
-          window.location.href='/home';
+          window.location.href='/dashboard';
         } else {
           window.location.href='/';
         }
