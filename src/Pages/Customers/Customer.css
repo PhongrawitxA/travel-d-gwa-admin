@@ -15,6 +15,7 @@ h2 {
     align-items: center;
 }
 
+
 .Container {
     height: 600px;
     padding: 0px 60px 40px 0px;
@@ -52,20 +53,39 @@ h2 {
 }
 
 .Table #Name {
-    text-align: center;
     width: 300px;
 }
 
 .Table #Email {
-    text-align: center;
     width: 350px;
 }
 
 .Table #Role {
     text-align: center;
-    width: 100px;
+    width: 120px;
 }
 
 .Table #Action {
     text-align: center;
+}
+
+.Table a {
+    color: #FFF;
+}
+
+.Table #Button {
+    display: flex;
+    justify-content: space-around;
+}
+
+#Info {
+    flex: 25%
+}
+
+#Delete {
+    flex: 25%
+}
+
+#Upgrade {
+    flex: 40%;
 }
