@@ -1,7 +1,7 @@
-import React, { useState,useEffect, useMemo} from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { useTable, useSortBy, useGlobalFilter, usePagination } from 'react-table'
+import axios from "axios";
 
-import MOCK_DATA from './MOCK_DATA.json'
 import { COLUMNS } from './Columns'
 import { SearchBox } from '../SearchBox/SearchBox'
 
@@ -11,10 +11,11 @@ import { AiFillInfoCircle } from 'react-icons/ai'
 import { FaTrash, FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 import { HiArrowCircleUp } from 'react-icons/hi'
 import { RiArrowUpSLine, RiArrowDownSLine } from 'react-icons/ri'
-import axios from "axios";
 
-export const CustomerTable = ()  => {
+export const CustomerTable = () => {
+    
     const columns = useMemo(() => COLUMNS, [])
+
     const [data,setData] = useState([]); 
     const getUser = () => {
         axios({
@@ -59,7 +60,7 @@ export const CustomerTable = ()  => {
         <div className='Customer'>
             <div className='Head'>
                 <h2>ผู้ใช้ & พาร์ทเนอร์</h2>
-                <SearchBox hint="ชื่อผู้ใช้" filter={globalFilter} setFilter={setGlobalFilter} />
+                <SearchBox filter={globalFilter} setFilter={setGlobalFilter} />
             </div>            
             <div className='Container'>
                 <table {...getTableProps()}>
