@@ -13,7 +13,7 @@ export const SearchBox = ({ hint, filter, setFilter }) => {
     <div>
       <input 
         type="text" id="Input"
-        placeholder={'ค้นหา'+hint} 
+        placeholder={'ค้นหา...'} 
         value={value || ''}
         onChange={e => {
           setValue(e.target.value);
