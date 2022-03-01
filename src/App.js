@@ -12,6 +12,8 @@ import Activity from './Pages/Activity/Activity';
 import Receipt from './Pages/Receipt/Receipt';
 import Manage from './Pages/Manage/Manage';
 
+import { CustomerInfo } from './Pages/Customers/CustomerInfo';
+
 import { BrowserRouter , Route , Routes} from "react-router-dom"
 
 function App() {
@@ -22,13 +24,22 @@ function App() {
           <Route path='/' element={<Login />} />
           <Route element={<AppLayout/>}>
             <Route path='/dashboard' element = {<Dashboard/>} />
+
             <Route path='/user' element={<Customers />} />
+            <Route path='/user/user_info' element={<CustomerInfo />} />
+
             <Route path='/confirm-partner' element={<Confirm />} />
+
             <Route path='/accommodation-partner' element={<Accommodation />} />
+
             <Route path='/rentcar-partner' element={<Rentcar />} />
+
             <Route path='/shuttle-partner' element={<Shuttle />} />
+
             <Route path='/activity-partner' element={<Activity />} />
+
             <Route path='/receipt-information' element={<Receipt />} />
+            
             <Route path='/manage-information' element={<Manage />} />
           </Route>
         </Routes>
