@@ -1,35 +1,17 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useMemo } from 'react'
 import { useTable, useSortBy, useGlobalFilter, usePagination } from 'react-table'
 
-import { COLUMNS } from './Columns'
 import { SearchBox } from '../SearchBox/SearchBox'
 
-import './CustomerTable.css'
+import './Table.css'
 
-import { AiFillInfoCircle } from 'react-icons/ai'
-import { FaTrash, FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleLeft, FaAngleRight } from 'react-icons/fa'
-import { HiArrowCircleUp } from 'react-icons/hi'
+import { FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 import { RiArrowUpSLine, RiArrowDownSLine } from 'react-icons/ri'
-import axios from "axios";
 
-export const CustomerTable = () => {
+export const Table = ({data, column, header, Action}) => {
     
-    const columns = useMemo(() => COLUMNS, [])
-    const [data,setData] = useState([]); 
-    const getUser = () => {
-        axios({
-            method : "GET",
-            url: "http://localhost:8080/admin/getuser",
-          }).then( res => {
-                setData(res.data);
-          });
-    }
-    useEffect(()=> {
-        (async () => {
-            await getUser();
-        })();
-    },[]);
-
+    const columns = useMemo(() => column, [])
+    
     const tableInstance = useTable({
         columns,
         data
@@ -58,7 +40,7 @@ export const CustomerTable = () => {
     return (        
         <div className='Customer'>
             <div className='Head'>
-                <h2>ผู้ใช้ & พาร์ทเนอร์</h2>
+                <h2>{header}</h2>
                 <SearchBox filter={globalFilter} setFilter={setGlobalFilter} />
             </div>            
             <div className='Container'>
@@ -67,6 +49,7 @@ export const CustomerTable = () => {
                         {
                             headerGroups.map((headerGroups) => (
                                 <tr {...headerGroups.getHeaderGroupProps()}>
+                                    <th className='Number'>ลำดับ</th>
                                     {headerGroups.headers.map((column) => (
                                         <th {...column.getHeaderProps(column.getSortByToggleProps())} id={column.render('IdName')}>
                                             {column.render('Header')}
@@ -82,20 +65,17 @@ export const CustomerTable = () => {
                     </thead>
                     <tbody {...getTableBodyProps()}>
                         {
-                            page.map(row => {
+                            page.map((row, index) => {
                                 prepareRow(row)
                                 return (
                                     <tr {...row.getRowProps()}>
+                                        <td>{index + 1}</td>
                                         {
                                             row.cells.map( cell => {
                                                 return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
                                             })
                                         }
-                                        <td id='Button'>
-                                                <a href={'info_' + row.id} id='Info'><AiFillInfoCircle size={40} />&nbsp; <div>ดูข้อมูล</div></a>
-                                                <a href={'delete_' + row.id} id='Delete'><FaTrash size={40} />&nbsp; <div>ลบข้อมูล</div></a>
-                                                <a href={'upgrade_' + row.id} id='Upgrade'><HiArrowCircleUp size={50} />&nbsp; <div>อัปเกรดเป็นบทบาทแอดมิน</div></a>
-                                        </td>                                
+                                       {<Action id={row.id} />}                            
                                     </tr>
                                 )
                             })

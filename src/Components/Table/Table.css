@@ -60,19 +60,19 @@ table #Button {
 }
 
 table #Number {
-    width: 70px;
+    width: 50px;
 }
 
 table #Realname {
-    width: 280px;
+    width: 250px;
 }
 
 table #Surname {
-    width: 280px;
+    width: 250px;
 }
 
 table #Email {
-    width: 320px;
+    width: 300px;
 }
 
 table #Action {
