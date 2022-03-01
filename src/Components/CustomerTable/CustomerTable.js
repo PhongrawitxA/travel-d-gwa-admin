@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useState,useEffect,useMemo } from 'react'
 import { useTable, useSortBy, useGlobalFilter, usePagination } from 'react-table'
 
 import MOCK_DATA from './MOCK_DATA.json'
@@ -11,11 +11,25 @@ import { AiFillInfoCircle } from 'react-icons/ai'
 import { FaTrash, FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 import { HiArrowCircleUp } from 'react-icons/hi'
 import { RiArrowUpSLine, RiArrowDownSLine } from 'react-icons/ri'
+import axios from "axios";
 
 export const CustomerTable = () => {
     
     const columns = useMemo(() => COLUMNS, [])
-    const data = useMemo(() => MOCK_DATA, [])
+    const getUser = () => {
+        axios({
+            method : "GET",
+            url: "http://localhost:8080/admin/getuser",
+          }).then( res => {
+                setData(res.data);
+          });
+    }
+    const [data,setData] = useState([]); 
+    useEffect(()=> {
+        (async () => {
+            await getUser();
+        })();
+    },[]);
 
     const tableInstance = useTable({
         columns,

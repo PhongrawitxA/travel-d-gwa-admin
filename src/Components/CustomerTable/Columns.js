@@ -1,12 +1,12 @@
 export const COLUMNS = [
     {
         Header: 'เลขที่',
-        accessor: 'id',
+        accessor: '_id',
         IdName: 'Number'
     },
     {
         Header: 'ชื่อผู้ใช้',
-        accessor: 'name',
+        accessor: 'realname',
         IdName: 'Name'
     },
     {
@@ -16,7 +16,7 @@ export const COLUMNS = [
     },
     {
         Header: 'บทบาท',
-        accessor: 'role',
+        accessor: 'surname',
         IdName: 'Role'
     },
 ]
