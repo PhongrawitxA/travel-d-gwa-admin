@@ -29,10 +29,6 @@ function Topbar() {
               </ul>
             </div>
           </div>
-          {/* <a href='#'>
-            Admin 1
-            <img src={Profile} alt="Avatar" class="avatar"></img>
-          </a> */}
         </li>
       </ul>
     </div>

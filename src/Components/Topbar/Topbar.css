@@ -14,7 +14,7 @@
 
 }
 
-a {
+.Topbar a {
     text-decoration: none;
     display: flex;
     flex-direction: row;
@@ -54,8 +54,8 @@ a {
 
 .Action .DropDown {
     position: absolute;
-    top: 50px;
-    right: 30px;
+    top: 40px;
+    right: 20px;
     padding: 10px 20px;
     background-color: #fff;
     width: 200px;
@@ -67,7 +67,7 @@ a {
 }
 
 .Action .DropDown.active {
-    top: 80px;
+    top: 70px;
     visibility: visible;
     opacity: 1;
 }

@@ -1,0 +1,142 @@
+h2 {
+    font-size: 32px;
+}
+
+.Head {
+    margin: 10px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Customer {
+    padding: 0px 60px 40px 0px;
+}
+
+table {
+    color: #FFF !important;
+    background-color: #1D3557 !important;
+    width: 100%;
+    font-size: 16px;
+    border-collapse: collapse;
+    border-radius: 25px;
+}
+
+table th {
+    -webkit-user-select: none;     
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    align-items: center;
+    text-align: left;
+    padding: 40px 20px 20px 20px;
+}
+
+table span {
+    padding-left: 5px;
+    line-height: 10px;
+    vertical-align: middle;
+}
+
+table td {
+    padding: 8px 15px 8px 15px;
+}
+
+table tr {
+    border-bottom: 1px solid #ECFAFF;
+}
+
+table a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: #FFF;
+}
+
+table #Button {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+table #Number {
+    width: 70px;
+}
+
+table #Name {
+    width: 280px;
+}
+
+table #Email {
+    width: 320px;
+}
+
+table #Role {
+    width: 120px;
+}
+
+table #Action {
+    text-align: center;
+}
+
+#Info {
+    flex: 25%
+}
+
+#Delete {
+    flex: 25%
+}
+
+#Upgrade {
+    flex: 40%;
+}
+
+.Footer {
+    padding: 30px 0px 0 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.Footer span {
+    font-size: 18px;
+}
+
+.Footer input {
+    font-size: 16px;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    text-align: center;
+    padding: 2px 0 2px 0px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+}
+
+.Footer input::-webkit-outer-spin-button,
+.Footer input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.Footer input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+    font-size: 16px;
+    color: #1D3557;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    color: #D9D9D9;
+}
+
+.Button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-left: 15px;
+}
