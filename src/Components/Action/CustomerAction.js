@@ -2,9 +2,9 @@ import React ,{useState} from 'react'
 import './CustomerAction.css'
 
 import { AiFillInfoCircle } from 'react-icons/ai'
-import { FaTrash, FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+import { FaTrash } from 'react-icons/fa'
 import { HiArrowCircleUp } from 'react-icons/hi'
-import {Button,Modal,render} from 'react-bootstrap';
+import { Button, Modal, render} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from "axios";
 
@@ -23,7 +23,7 @@ export const CustomerAction = ({id}) => {
   }
   return (
     <td id='Button'>
-        <a href={'info_' + id} id='Info'><AiFillInfoCircle size={40} />&nbsp; <div>ดูข้อมูล</div></a>
+        <a href={'customer/info'} id='Info'><AiFillInfoCircle size={40} />&nbsp; <div>ดูข้อมูล</div></a>
         <>
         <a onClick={handleShow} id='Delete'><FaTrash size={40} />&nbsp; <div>ลบข้อมูล</div></a>
   

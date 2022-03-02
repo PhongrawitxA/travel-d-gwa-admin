@@ -18,7 +18,7 @@ export const SidebarData = [
     {
         title: "ผู้ใช้ & พาร์ทเนอร์",
         icon: <PersonRoundedIcon style={{fontSize:32}} />,
-        link: "/user"
+        link: "/customer"
     },
     {
         title: "อนุมัติพาร์ทเนอร์",

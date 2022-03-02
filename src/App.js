@@ -11,8 +11,7 @@ import Shuttle from './Pages/Shuttle/Shuttle';
 import Activity from './Pages/Activity/Activity';
 import Receipt from './Pages/Receipt/Receipt';
 import Manage from './Pages/Manage/Manage';
-
-import { CustomerInfo } from './Pages/Customers/CustomerInfo';
+import { CustomerInfo } from './Pages/Customers/Info/CustomerInfo';
 
 import { BrowserRouter , Route , Routes} from "react-router-dom"
 
@@ -25,8 +24,8 @@ function App() {
           <Route element={<AppLayout/>}>
             <Route path='/dashboard' element = {<Dashboard/>} />
 
-            <Route path='/user' element={<Customers />} />
-            <Route path='/user/user_info' element={<CustomerInfo />} />
+            <Route path='/customer' element={<Customers />} />
+            <Route path='/customer/info' element={<CustomerInfo />} />
 
             <Route path='/confirm-partner' element={<Confirm />} />
 

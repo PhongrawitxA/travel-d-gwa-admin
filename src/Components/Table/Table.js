@@ -73,7 +73,7 @@ export const Table = ({data, column, header, Action}) => {
                                                 return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
                                             })
                                         }
-                                       {<Action id={page[index]} />}                            
+                                        {<Action id={page[index]} />}                            
                                     </tr>
                                 )
                             })
