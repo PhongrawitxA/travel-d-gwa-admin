@@ -1,4 +1,5 @@
 import React ,{useState} from 'react'
+import './CustomerAction.css'
 
 import { AiFillInfoCircle } from 'react-icons/ai'
 import { FaTrash, FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleLeft, FaAngleRight } from 'react-icons/fa'

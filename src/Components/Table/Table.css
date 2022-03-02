@@ -1,9 +1,5 @@
-.Customer h2 {
-    font-size: 32px;
-}
-
 .Customer .Head {
-    margin: 10px 0 10px 0;
+    margin: 20px 0 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +35,7 @@ table span {
 }
 
 table td {
-    padding: 8px 15px 8px 15px;
+    padding: 8px 15px 8px 20px;
 }
 
 table tr {
@@ -60,7 +56,10 @@ table #Button {
 }
 
 table #Number {
-    width: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 60px;
 }
 
 table #Realname {
@@ -77,18 +76,6 @@ table #Email {
 
 table #Action {
     text-align: center;
-}
-
-#Info {
-    flex: 25%
-}
-
-#Delete {
-    flex: 25%
-}
-
-#Upgrade {
-    flex: 40%;
 }
 
 .Footer {

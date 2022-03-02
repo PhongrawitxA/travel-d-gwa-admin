@@ -1,0 +1,20 @@
+#Info {
+    flex: 25%
+}
+
+#Delete {
+    flex: 25%
+}
+
+#Upgrade {
+    flex: 40%;
+}
+
+#Info, #Delete, #Upgrade{
+    cursor: pointer !important;
+}
+
+#Info:hover, #Delete:hover, #Upgrade:hover{
+    cursor: pointer !important;
+    color: #3C6E71;
+}

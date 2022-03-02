@@ -49,7 +49,6 @@ export const Table = ({data, column, header, Action}) => {
                         {
                             headerGroups.map((headerGroups) => (
                                 <tr {...headerGroups.getHeaderGroupProps()}>
-                                    <th className='Number'>ลำดับ</th>
                                     {headerGroups.headers.map((column) => (
                                         <th {...column.getHeaderProps(column.getSortByToggleProps())} id={column.render('IdName')}>
                                             {column.render('Header')}
@@ -69,7 +68,6 @@ export const Table = ({data, column, header, Action}) => {
                                 prepareRow(row)
                                 return (
                                     <tr {...row.getRowProps()}>
-                                        <td>{index + 1}</td>
                                         {
                                             row.cells.map( cell => {
                                                 return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
