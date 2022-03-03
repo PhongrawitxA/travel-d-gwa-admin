@@ -62,18 +62,6 @@ table #Number {
     width: 60px;
 }
 
-table #Realname {
-    width: 250px;
-}
-
-table #Surname {
-    width: 250px;
-}
-
-table #Email {
-    width: 300px;
-}
-
 table #Action {
     text-align: center;
 }

@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
-function Confirm() {
+import { COLUMNS } from './Columns'
+import { Table } from '../../Components/Table/Table'
+
+
+export const Confirm = () => {
+
+  const [data,setData] = useState([]); 
+
   return (
-    <div>Confirm</div>
+    <div>
+        <Table header={'อนุมัติพาร์ทเนอร์'} data={data} column={COLUMNS} />                   
+    </div>
   )
 }
 

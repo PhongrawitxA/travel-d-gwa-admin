@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
-function Rentcar() {
+import { COLUMNS } from './Columns'
+import { Table } from '../../Components/Table/Table'
+
+
+export const Rentcar = () => {
+
+  const [data,setData] = useState([]); 
+
   return (
-    <div>Rentcar</div>
+    <div>
+        <Table header={'พาร์ทเนอร์เช่ารถ'} data={data} column={COLUMNS} />                   
+    </div>
   )
 }
 

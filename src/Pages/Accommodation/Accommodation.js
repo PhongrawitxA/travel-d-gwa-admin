@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
-function Accommodation() {
+import { COLUMNS } from './Columns'
+import { Table } from '../../Components/Table/Table'
+
+
+export const Accommodation = () => {
+
+  const [data,setData] = useState([]); 
+
   return (
-    <div>Accommodation</div>
+    <div>
+        <Table header={'พาร์ทเนอร์ที่พัก'} data={data} column={COLUMNS} />                   
+    </div>
   )
 }
 
