@@ -18,7 +18,7 @@ export const CustomerAction = ({id}) => {
           method : "DELETE",
           url: "http://localhost:8080/admin/deleteuser/" + id,
         }).then( res => {
-          window.location.href='/user';
+          window.location.href='/customer';
         });
   }
   return (
