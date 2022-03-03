@@ -1,11 +1,30 @@
-import React from 'react'
+import React , {useState,useEffect} from 'react'
+import {useParams} from 'react-router-dom'
 import './CustomerInfo.css'
 import DefaultUserImage from '../../../Assets/Images/default_user.jpg'
+import axios from 'axios'
 
 import { GrFormPrevious } from 'react-icons/gr'
 import { HiArrowCircleUp } from 'react-icons/hi'
 
 export const CustomerInfo = () => {
+  const {id} = useParams();
+  const [data,setData] = useState([]);
+  const getUserInfo = (id) => {
+    axios({
+        method : "GET",
+        url: "http://localhost:8080/admin/getuser/" + id,
+      }).then( res => {
+            setData(res.data);
+            console.log(data);
+      });
+  }
+  useEffect(()=> {
+    (async () => {
+        await getUserInfo(id);
+    })();
+  },[]);
+
   return (
     <div className='Customer-info'>
         <div className='Head'>
@@ -19,17 +38,17 @@ export const CustomerInfo = () => {
                 <div className='Info'>
                   <img src={DefaultUserImage} alt="รูปโปรไฟล์" width="300" height="300" />
                   <ul className='Info-text'>
-                    <li className='Row'><div className='Title'>ชื่อ</div><div className='User-info'>{'วัฒนศิริ'}</div></li>
-                    <li className='Row'><div className='Title'>นามสกุล</div><div className='User-info'>{'อุปรักขิตานนท์'}</div></li>
-                    <li className='Row'><div className='Title'>บทบาท</div><div className='User-info'>{'ผู้ใช้ทั่วไป'}</div></li>
-                    <li className='Row'><a href={'upgrade_'} id='Upgrade'><HiArrowCircleUp size={50} />&nbsp; <div>อัปเกรดเป็นบทบาทแอดมิน</div></a></li>
+                    <li className='Row'><div className='Title'>ชื่อ</div><div className='User-info'>{data.realname}</div></li>
+                    <li className='Row'><div className='Title'>นามสกุล</div><div className='User-info'>{data.surname}</div></li>
+                    <li className='Row'><div className='Title'>บทบาท</div><div className='User-info'>{data.role}</div></li>
+                    {/* <li className='Row'><a href={'upgrade_'} id='Upgrade'><HiArrowCircleUp size={50} />&nbsp; <div>อัปเกรดเป็นบทบาทแอดมิน</div></a></li> */}
                   </ul>               
                 </div>
                 <div className='Contact'>
                   <h4>รายละเอียดติดต่อ</h4>
                   <ul className='Info-text'>
-                    <li className='Row'><div className='Title'>เบอร์โทรศัพท์</div><div className='User-info'>{'0970405681'}</div></li>
-                    <li className='Row'><div className='Title'>อีเมล</div><div className='User-info'>{'wattanasiri.449@mail.kmutt.ac.th'}</div></li>
+                    <li className='Row'><div className='Title'>เบอร์โทรศัพท์</div><div className='User-info'>{data.phone}</div></li>
+                    <li className='Row'><div className='Title'>อีเมล</div><div className='User-info'>{data.email}</div></li>
                   </ul>               
                 </div>
               </div> 
