@@ -25,7 +25,7 @@ function App() {
             <Route path='/dashboard' element = {<Dashboard/>} />
 
             <Route path='/customer' element={<Customers />} />
-            <Route path='/customer/info' element={<CustomerInfo />} />
+            <Route path='/customer/info/:id' element={<CustomerInfo />} />
 
             <Route path='/confirm-partner' element={<Confirm />} />
 
