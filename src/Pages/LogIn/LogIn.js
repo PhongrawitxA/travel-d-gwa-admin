@@ -35,15 +35,15 @@ export default function LogIn() {
     };
 
     return (
-        <div style={{display: 'flex',justifyContent:'center',position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
+        <div className='Login' style={{display: 'flex',justifyContent:'center',position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
             <Box sx={{
-                    width: 400,
+                    width: 450,
                     height: '100%',
                     backgroundColor: '#1d3557',
                     textAlign:'center',
                     borderRadius:'41px',
                     paddingX:'30px',
-                    paddingBottom:'50px',
+                    paddingY:'50px',                  
             }}>
                 <p className='righteous' style={{fontSize:50,color:'white'}}>
                     TravelDGwa

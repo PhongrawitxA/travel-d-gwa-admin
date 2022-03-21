@@ -1,6 +1,28 @@
 .thai{
-    font-family: 'IBM Plex Sans Thai', sans-serif;
+    font-family: 'IBM Plex Sans Thai', sans-serif !important;
+    font-weight: bold !important;
 }
 .righteous{
     font-family: 'Righteous', cursive;
+}
+
+::-webkit-input-placeholder {
+    font-family: 'IBM Plex Sans Thai', sans-serif !important;
+}
+::-moz-placeholder {
+    font-family: 'IBM Plex Sans Thai', sans-serif !important;
+}
+:-ms-input-placeholder {
+    font-family: 'IBM Plex Sans Thai', sans-serif !important;
+}
+:-moz-placeholder {
+    font-family: 'IBM Plex Sans Thai', sans-serif !important;
+}
+
+.Login Button:hover{
+    background-color: #3c6e718c !important;
+}
+
+TextField {
+    border: 0 !important;
 }

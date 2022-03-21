@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import { COLUMNS } from './Columns'
 import { Table } from '../../Components/Table/Table'
+import { ConfirmAction } from '../../Components/Action/ConfirmAction.js'
 
 
 export const Confirm = () => {
@@ -11,7 +12,7 @@ export const Confirm = () => {
 
   return (
     <div>
-        <Table header={'อนุมัติพาร์ทเนอร์'} data={data} column={COLUMNS} />                   
+        <Table header={'อนุมัติพาร์ทเนอร์'} data={data} column={COLUMNS} Action={ConfirmAction} />                   
     </div>
   )
 }
