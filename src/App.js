@@ -1,17 +1,26 @@
 import './Assets/Styles/App.css';
+
 import React from 'react';
+
 import Login from './Pages/LogIn/LogIn';
 import AppLayout from './Layouts/AppLayout';
 import Dashboard from './Pages/Dashboard/Dashboard';
+
 import Customers from './Pages/Customers/Customer';
+import { CustomerInfo } from './Pages/Customers/Info/CustomerInfo';
+
 import Confirm from './Pages/Confirm/Confirm';
+
 import Accommodation from './Pages/Accommodation/Accommodation';
+import { AccommodationInfo_1 } from './Pages/Accommodation/AccommodationInfo_1';
+import { AccommodationInfo_2 } from './Pages/Accommodation/AccommodationInfo_2';
+import { AccommodationInfo_3 } from './Pages/Accommodation/AccommodationInfo_3';
+
 import Rentcar from './Pages/Rentcar/Rentcar';
 import Shuttle from './Pages/Shuttle/Shuttle';
 import Activity from './Pages/Activity/Activity';
 import Receipt from './Pages/Receipt/Receipt';
 import Manage from './Pages/Manage/Manage';
-import { CustomerInfo } from './Pages/Customers/Info/CustomerInfo';
 
 import { BrowserRouter , Route , Routes} from "react-router-dom"
 
@@ -30,6 +39,10 @@ function App() {
             <Route path='/confirm-partner' element={<Confirm />} />
 
             <Route path='/accommodation-partner' element={<Accommodation />} />
+            <Route path='/accommodation-partner/info-1/:id' element={<AccommodationInfo_1 />} />
+            <Route path='/accommodation-partner/info-2/:id' element={<AccommodationInfo_2 />} />
+            <Route path='/accommodation-partner/info-3/:id' element={<AccommodationInfo_3 />} />
+
 
             <Route path='/rentcar-partner' element={<Rentcar />} />
 

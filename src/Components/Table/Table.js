@@ -53,7 +53,7 @@ export const Table = ({data, column, header, Action}) => {
                                         <th {...column.getHeaderProps(column.getSortByToggleProps())} id={column.render('IdName')}>
                                             {column.render('Header')}
                                             <span>           
-                                                {column.isSorted ? (column.isSortedDesc ? <RiArrowUpSLine size={24} /> : <RiArrowDownSLine size={24} />) : ''}
+                                                {column.isSorted ? (column.isSortedDesc ? <RiArrowUpSLine size={24} /> : <RiArrowDownSLine size={24} />) : <RiArrowDownSLine size={24} />}
                                             </span>
                                         </th>
                                     ))}
@@ -74,7 +74,7 @@ export const Table = ({data, column, header, Action}) => {
                                             })
                                         }
                                         {<Action id={page[index]} />}                            
-                                    </tr>
+                                    </tr>   
                                 )
                             })
                         }
