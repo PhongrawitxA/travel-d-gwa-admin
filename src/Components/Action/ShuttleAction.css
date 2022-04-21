@@ -1,0 +1,79 @@
+#ShuttleInfo {
+    flex: 30%;
+}
+
+#ShuttleMessage {
+    flex: 35%;
+}
+
+#ShuttleDelete {
+    flex: 35%;
+}
+
+#ShuttleInfo, #ShuttleMessage, #ShuttleDelete {
+    cursor: pointer !important;
+}
+
+#ShuttleInfo:hover, #ShuttleMessage:hover, #ShuttleDelete:hover {
+    cursor: pointer !important;
+    color: #3C6E71;
+}
+
+#ShuttleRealname {
+    width: 30%;
+}
+
+#ShuttleEmail {
+    width: 30%;
+}
+
+.modal {
+    padding-top: 15%;
+}
+
+.modalHeader {
+    justify-content: center;
+    border: none;
+}
+
+.modalTitle {
+    padding-top: 15px;
+    font-weight: bold;
+    color: #1D3557;
+}
+
+.modalBody {
+    padding: 30px 50px 40px 50px;
+    font-size: 18px;
+}
+
+.modalFooter {
+    border: none;
+    padding: 0 80px 20px 80px;
+    justify-content: space-between;
+}
+
+.modalButtonPrimary, .modalButtonSecondary {
+    height: 50px;
+    width: 150px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+}
+
+.modalButtonPrimary {
+    background-color: #3C6E71;
+}
+
+.modalButtonSecondary {
+    background-color: #F25B52;
+}
+
+.modalButtonPrimary:hover {
+    background-color: #2f5658;
+}
+
+.modalButtonSecondary:hover {
+    background-color: #be4a44;
+}
