@@ -1,0 +1,145 @@
+.AccommodationPartner-info-1 .Head {
+    margin-top: 20px;
+}
+
+.AccommodationPartner-info-1 .Container {
+    padding: 50px;
+    margin: 40px 0 0 0;
+    height: 720px;
+    width: 1450px;
+    border-radius: 20px;
+    background-color: #1D3557;
+    color: #FFF;
+    display: flex;
+}
+
+.AccommodationPartner-info-1 a {
+    cursor: pointer;
+}
+
+.AccommodationPartner-info-1 h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.AccommodationPartner-info-1 .Container .Info-text {
+    font-size: 20px;
+    color: #d9d9d9;
+    padding: 0;
+}
+
+.AccommodationPartner-info-1 .Container .Info .Info-text .Row {
+    padding-bottom: 50px;
+    width: 430px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.AccommodationPartner-info-1 .Container .Info-text .Row {
+    padding-bottom: 50px;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.AccommodationPartner-info-1 .Container .Info .Title,
+.AccommodationPartner-info-1 .Container .Right .Title {
+    display: grid;
+    width: 25%;
+    font-weight: bold;    
+    height: 50px;
+}
+
+.AccommodationPartner-info-1 .Container .Info .User-info,
+.AccommodationPartner-info-1 .Container .Right .User-info {
+    display: grid;
+    width: 75%;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.AccommodationPartner-info-1 .Container .Title {
+    display: grid;
+    width: 20%;
+    font-weight: bold;    
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #FFF;
+}
+
+.AccommodationPartner-info-1 .Container .User-info {
+    display: grid;
+    width: 80%;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.AccommodationPartner-info-1 .Container .Left {
+    width: 55%;
+}
+
+.AccommodationPartner-info-1 .Container .Left .Info {
+    display: flex;
+}
+
+.AccommodationPartner-info-1 .Container .Left .Info a {
+    margin-top: 40px;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.AccommodationPartner-info-1 .Container .Left .Info .Info-text{
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.AccommodationPartner-info-1 .Container .Left .Address,
+.AccommodationPartner-info-1 .Container .Left .Detail {
+    margin-top: 20px;
+}
+
+.AccommodationPartner-info-1 .Container .Right {
+    width: 45%;
+}
+
+.AccommodationPartner-info-1 .Container .Right .Card{
+    margin-top: 50px;
+}
+
+.AccommodationPartner-info-1 .Container .Right .Map img {
+    border-radius: 15px;
+}
+
+.AccommodationPartner-info-1 .Footer {
+    padding-right: 100px;
+    padding-bottom: 40px;
+}
+
+.AccommodationPartner-info-1 .Footer .Button {
+    margin-left: 20px;
+    border-radius: 15px;
+    width: 100px;
+    height: 40px;
+    background-color: #3C6E71;
+    border: none;
+}
+
+.AccommodationPartner-info-1 .Footer .Button:hover {
+    background-color: #254647
+}

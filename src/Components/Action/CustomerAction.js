@@ -1,4 +1,5 @@
 import React ,{useState} from 'react'
+
 import './CustomerAction.css'
 
 import { AiFillInfoCircle } from 'react-icons/ai'
@@ -39,48 +40,33 @@ export const CustomerAction = ({id}) => {
   }
 return (
   <td id='Button'>
-      <a href={'customer/info/' + id.original._id} id='Info'><AiFillInfoCircle size={40} />&nbsp; <div>ดูข้อมูล</div></a>
-      <>
-      <a onClick={handleShow} id='Delete'><FaTrash size={40} />&nbsp; <div>ลบข้อมูล</div></a>
-
-      <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Do you want to delete {id.original.email} ?</Modal.Title>
+      <a href={'customer/info/' + id.original._id} id='CustomerInfo'><AiFillInfoCircle size={40} />&nbsp; <div>ดูข้อมูล</div></a>
+      <a onClick={handleShow2} id='CustomerUpgrade'><HiArrowCircleUp size={40} />&nbsp; <div>อัปเกรดเป็นบทบาทแอดมิน</div></a>
+      <Modal show={show2} onHide={handleClose2} backdrop="static" keyboard={false} className='modal'>
+        <Modal.Header className='modalHeader'>
+          <Modal.Title className='modalTitle'>คุณต้องการอัปเกรดผู้ใช้เป็นแอดมิน ?</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-            This is {id.original.email}
+        <Modal.Body className='modalBody'>
+            ชื่อผู้ใช้ : {id.original.realname} <br/>
+            อีเมล : {id.original.email}
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={() => {deleteUser(id.original._id)}}>Delete</Button>
+        <Modal.Footer className='modalFooter'>
+          <Button variant="secondary" onClick={handleClose2} className='modalButtonSecondary'>ยกเลิก</Button>
+          <Button variant="primary" onClick={() => {promoteUser(id.original._id)}} className='modalButtonPrimary'>ยืนยัน</Button>
         </Modal.Footer>
       </Modal>
-    </>
-      <a onClick={handleShow2} id='Upgrade'><HiArrowCircleUp size={50} />&nbsp; <div>อัปเกรดเป็นบทบาทแอดมิน</div></a>
-      <Modal
-        show={show2}
-        onHide={handleClose2}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Do you want to promote {id.original.email} to admin?</Modal.Title>
+      <a onClick={handleShow} id='CustomerDelete'><FaTrash size={40} />&nbsp; <div>ลบข้อมูล</div></a>
+      <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} className='modal'>
+        <Modal.Header className='modalHeader'>
+          <Modal.Title className='modalTitle'>คุณต้องการลบข้อมูลผู้ใช้ ?</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-            This is {id.original.email}
+        <Modal.Body className='modalBody'>
+            ชื่อผู้ใช้ : {id.original.realname} <br/>
+            อีเมล : {id.original.email}
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose2}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={() => {promoteUser(id.original._id)}}>Promote</Button>
+        <Modal.Footer className='modalFooter'>
+          <Button variant="secondary" onClick={handleClose} className='modalButtonSecondary'>ยกเลิก</Button>
+          <Button variant="primary" onClick={() => {deleteUser(id.original._id)}} className='modalButtonPrimary'>ยืนยัน</Button>
         </Modal.Footer>
       </Modal>
   </td> 

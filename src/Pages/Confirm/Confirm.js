@@ -8,14 +8,14 @@ import { ConfirmAction } from '../../Components/Action/ConfirmAction.js'
 
 export const Confirm = () => {
 
-  const [data,setData] = useState([]);
+  const [data, setData] = useState([]); 
   const getUser = () => {
-    axios({
-        method : "GET",
-        url: "http://localhost:8080/admin/getuser",
-      }).then( res => {
-            setData(res.data);
-      });
+      axios({
+          method : "GET",
+          url: "http://localhost:8080/admin/getuser",
+        }).then( res => {
+              setData(res.data);
+        });
   }
   useEffect(()=> {
       (async () => {

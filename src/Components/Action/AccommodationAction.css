@@ -1,34 +1,30 @@
-#CustomerInfo {
-    flex: 25%
+#AccommodationInfo {
+    flex: 30%;
 }
 
-#CustomerDelete {
-    flex: 25%
+#AccommodationMessage {
+    flex: 35%;
 }
 
-#CustomerUpgrade {
-    flex: 40%;
+#AccommodationDelete {
+    flex: 35%;
 }
 
-#CustomerInfo, #CustomerDelete, #CustomerUpgrade{
+#AccommodationInfo, #AccommodationMessage, #AccommodationDelete {
     cursor: pointer !important;
 }
 
-#CustomerInfo:hover, #CustomerDelete:hover, #CustomerUpgrade:hover{
+#AccommodationInfo:hover, #AccommodationMessage:hover, #AccommodationDelete:hover {
     cursor: pointer !important;
     color: #3C6E71;
 }
 
-#CustomerRealname {
-    width: 250px;
+#AccommodationRealname {
+    width: 30%;
 }
 
-#CustomerSurname {
-    width: 250px;
-}
-
-#CustomerEmail {
-    width: 300px;
+#AccommodationEmail {
+    width: 30%;
 }
 
 .modal {
