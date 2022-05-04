@@ -7,6 +7,11 @@ export const COLUMNS = [
     {
         Header: 'ชื่อผู้ใช้',
         accessor: 'realname',
-        IdName: 'Realname'
+        IdName: 'ShuttleRealname'
+    },
+    {
+        Header: 'อีเมล',
+        accessor: 'email',
+        IdName: 'ShuttleEmail'
     },
 ]

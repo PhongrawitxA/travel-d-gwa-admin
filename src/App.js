@@ -17,8 +17,14 @@ import { AccommodationInfo_2 } from './Pages/Accommodation/AccommodationInfo_2';
 import { AccommodationInfo_3 } from './Pages/Accommodation/AccommodationInfo_3';
 
 import Rentcar from './Pages/Rentcar/Rentcar';
+import { RentcarInfo_1 } from './Pages/Rentcar/RentcarInfo_1'
+
 import Shuttle from './Pages/Shuttle/Shuttle';
+import { ShuttleInfo_1 } from './Pages/Shuttle/ShuttleInfo_1'
+
 import Activity from './Pages/Activity/Activity';
+import { ActivityInfo_1 } from './Pages/Activity/ActivityInfo_1'
+
 import Receipt from './Pages/Receipt/Receipt';
 import Manage from './Pages/Manage/Manage';
 
@@ -45,10 +51,14 @@ function App() {
 
 
             <Route path='/rentcar-partner' element={<Rentcar />} />
+            <Route path='/rentcar-partner/info-1/:id' element={<RentcarInfo_1 />} />
 
             <Route path='/shuttle-partner' element={<Shuttle />} />
+            <Route path='/shuttle-partner/info-1/:id' element={<ShuttleInfo_1 />} />
+
 
             <Route path='/activity-partner' element={<Activity />} />
+            <Route path='/activity-partner/info-1/:id' element={<ActivityInfo_1 />} />
 
             <Route path='/receipt-information' element={<Receipt />} />
             

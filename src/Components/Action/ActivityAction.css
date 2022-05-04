@@ -1,0 +1,79 @@
+#ActivityInfo {
+    flex: 30%;
+}
+
+#ActivityMessage {
+    flex: 35%;
+}
+
+#ActivityDelete {
+    flex: 35%;
+}
+
+#ActivityInfo, #ActivityMessage, #ActivityDelete {
+    cursor: pointer !important;
+}
+
+#ActivityInfo:hover, #ActivityMessage:hover, #ActivityDelete:hover {
+    cursor: pointer !important;
+    color: #3C6E71;
+}
+
+#ActivityRealname {
+    width: 30%;
+}
+
+#ActivityEmail {
+    width: 30%;
+}
+
+.modal {
+    padding-top: 15%;
+}
+
+.modalHeader {
+    justify-content: center;
+    border: none;
+}
+
+.modalTitle {
+    padding-top: 15px;
+    font-weight: bold;
+    color: #1D3557;
+}
+
+.modalBody {
+    padding: 30px 50px 40px 50px;
+    font-size: 18px;
+}
+
+.modalFooter {
+    border: none;
+    padding: 0 80px 20px 80px;
+    justify-content: space-between;
+}
+
+.modalButtonPrimary, .modalButtonSecondary {
+    height: 50px;
+    width: 150px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+}
+
+.modalButtonPrimary {
+    background-color: #3C6E71;
+}
+
+.modalButtonSecondary {
+    background-color: #F25B52;
+}
+
+.modalButtonPrimary:hover {
+    background-color: #2f5658;
+}
+
+.modalButtonSecondary:hover {
+    background-color: #be4a44;
+}
