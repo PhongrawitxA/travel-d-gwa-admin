@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&display=swap');
+
+.SideMenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 340px;
+    height: 100%;
+    padding: 40px 30px;
+    box-shadow: 10px 0 50px 0 rgba(0, 0, 0, 0.4);
+    transition: all .15s ease-in-out;
+}
+
+.SideMenu .top-section {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SideMenu .top-section .logo{
+    width: 250px;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.SideMenu .top-section .logo img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: all .15s ease-in-out;
+}
+
+.SideMenu .top-section .toggle-menu {
+    font-size: 36px;
+    color: #fff;
+    background-color: #1D3557;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 310px;
+    transition: all .15s ease-in-out;
+}
+
+.SideMenu .top-section .toggle-menu .open-menu-icon {
+    display: none;
+}
+
+.SideMenu .main-menu {
+    padding-top: 40px;
+}
+
+.SideMenu .main-menu ul{
+    padding: 0;
+    list-style: none;
+}
+
+.SideMenu .main-menu .menu-item {
+    width: 282px;
+    margin-bottom: 20px;
+    color: #827E7E;
+    text-decoration: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 18px;
+    transition: all .15s ease-in-out;
+}
+
+.SideMenu .main-menu .menu-item:hover{
+    color: #fff;
+    background-color: #1D3557;
+    border-radius: 18px;
+}
+
+#active {
+    color: #fff;
+    background-color: #1D3557;
+    border-radius: 18px;
+}
+
+.SideMenu .main-menu .menu-item .menu-icon {
+    margin-left: 16px;
+    margin-right: 12px;
+    width: 54px;
+    height: 54px;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 54px;
+    text-align: center;
+}
+
+.SideMenu .main-menu .menu-item span {
+    white-space: nowrap;
+    transition: all .15s ease-in-out;
+}
+
+.SideMenu .main-menu .menu-item .dropdown-icon {
+    font-size: 28px;
+    margin-left: auto;
+    margin-right: 12px;
+    opacity: 1;
+    transition: all .15s ease-in;
+}
+
+.SideMenu .main-menu .sub-menu {
+    width: 200px;
+    margin-top: -20px;
+    margin-left: 40px;
+    color: #827E7E;
+    border-left: 1px solid #827E7E;
+    box-sizing: border-box;
+    padding-left: 45px;
+    padding-top: 2px;
+    transition: all .15s ease-in;
+    max-height: 200px;
+}
+
+.SideMenu .main-menu .sub-menu a {
+    color: #827E7E;
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.SideMenu .main-menu .sub-menu a:hover {
+    color: #1D3557;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.SideMenu .main-menu .sub-menu.inactive {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 0px;
+    transition: all .15s ease-in;
+}
+
+
+.SideMenu.inactive {
+    width: 80px;
+    height: 100%;
+    padding: 40px 10px;
+}
+
+.SideMenu.inactive .top-section .logo img {
+    opacity: 0;
+}
+
+.SideMenu.inactive .top-section .toggle-menu {
+    left: 0;
+    border-radius: 0 10px 10px 0;
+    width: 88px;
+    height: 80px;
+}
+
+.SideMenu.inactive .top-section .toggle-menu .close-menu-icon {
+    display: none;
+}
+
+.SideMenu.inactive .top-section .toggle-menu .open-menu-icon {
+    display: unset;
+}
+
+.SideMenu.inactive .main-menu .menu-item {
+    width: 60px;
+    margin-bottom: 20px;
+    color: #827E7E;
+    text-decoration: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+}
+
+.SideMenu.inactive .main-menu .menu-item:hover{
+    color: #fff;
+    background-color: #1D3557;
+    border-radius: 18px;
+}
+
+.SideMenu.inactive .main-menu .menu-item .menu-icon {
+    width: 54px;
+    height: 54px;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 54px;
+    text-align: center;
+}
+
+.SideMenu.inactive .main-menu .menu-item span {
+    white-space: nowrap;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.SideMenu.inactive .main-menu .menu-item .dropdown-icon {
+    white-space: nowrap;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all .15s ease-in;
+}
+
+.SideMenu.inactive .main-menu .sub-menu {
+    width: 200px;
+    margin-top: 0px;
+    margin-left: 30px;
+    color: #827E7E;
+    border-left: 1px solid #827E7E;
+    box-sizing: border-box;
+    padding-left: 45px;
+    padding-top: 2px;
+}
+
+.SideMenu.inactive .main-menu .sub-menu a {
+    opacity: 0;
+    margin: 10px 0;
+    font-size: 16px; 
+}

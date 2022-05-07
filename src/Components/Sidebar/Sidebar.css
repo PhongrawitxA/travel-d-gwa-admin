@@ -30,7 +30,7 @@
 }
 
 .SidebarList .row {
-    width: 260px;
+    width: 290px;
     height: 54px;
     list-style-type: none;
     display: flex;
@@ -39,11 +39,13 @@
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+    transition: 0.1s;
 }
 
 .SidebarList .row:hover {
     cursor: pointer;
-    background-color: #ECFAFF;
+    color: #FFFFFF;
+    background-color: #1D3557;
 }
 
 .SidebarList #active{
@@ -58,6 +60,15 @@
 }
 
 .row #title {
-    flex: 75%;
+    padding-right: 0;
+    flex: 60%;
     font-size: 18px;
+    display: grid;
+}
+
+.row #dropdown {
+    padding: 0;
+    flex: 15%;
+    display: grid;
+    place-items: left;
 }
