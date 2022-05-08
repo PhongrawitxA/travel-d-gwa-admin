@@ -1,9 +1,9 @@
 .AppLayout {
     padding-left: 150px;
-    transition: all .1s ease-in;
+    transition: all .3s ease-in-out;
 }
 
 .AppLayout.active {
     padding-left: 420px;
-    transition: all .1s ease-in;
+    transition: all .3s ease-in-out;
 }

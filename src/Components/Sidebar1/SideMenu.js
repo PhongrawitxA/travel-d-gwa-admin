@@ -5,6 +5,10 @@ import { SideMenuData } from './SideMenuData'
 
 import Logo_Short from '../../Assets/Images/Logo_Short.png'
 import Logo_FullText from '../../Assets/Images/Logo_FullText.png'
+import Logo from '../../Assets/Images/Logo.png'
+import Logo_bg from '../../Assets/Images/Logo_bg.png'
+import Logo_blue from '../../Assets/Images/Logo_blue.png'
+import Logo_blue_plane from '../../Assets/Images/Logo_blue_plane.png'
 
 import { HiMenu } from 'react-icons/hi'
 import { IoClose } from 'react-icons/io5'
@@ -32,7 +36,7 @@ const SideMenu = (props) => {
     <div className={`SideMenu ${inactive ? "inactive" : ""}`}>
         <div className='top-section'>
             <div className='logo'>
-                <img src={Logo_FullText} alt='webscript' />
+                <img src={Logo_blue_plane} alt='webscript' />
             </div>      
             <div 
                 className='toggle-menu' 
@@ -61,47 +65,6 @@ const SideMenu = (props) => {
                     />
                 ))}
             </ul>
-
-            {/* <ul>
-                <li>
-                    <a className='menu-item'>
-                        <div className='menu-icon'>
-                            <MdDashboard />
-                        </div>
-                        <span>หน้าหลัก</span>
-                    </a>
-                </li>
-                <li>
-                    <a className='menu-item'>
-                        <div className='menu-icon'>
-                            <FaUser />  
-                        </div>
-                        <span>ผู้ใช้ & พาร์ทเนอร์</span>
-                    </a>
-                </li>
-                <li>
-                    <a className='menu-item'>
-                        <div className='menu-icon'>
-                            <IoCheckbox />
-                        </div>
-                        <span>อนุมัติพาร์ทเนอร์</span>
-                    </a>
-                    <ul className='sub-menu'>
-                        <li>
-                            <a>พาร์ทเนอร์ที่พัก</a>
-                        </li>
-                        <li>
-                            <a>พาร์ทเนอร์เช่ารถ</a>
-                        </li>
-                        <li>
-                            <a>พาร์ทเนอร์รถ รับ - ส่ง</a>
-                        </li>
-                        <li>
-                            <a>พาร์ทเนอร์กิจกรรม</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul> */}
         </div>
     </div>
   )
