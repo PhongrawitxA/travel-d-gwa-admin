@@ -18,7 +18,7 @@ export default function LogIn() {
           email : email,
           password : password
         },
-        url: "https://traveldgwa.herokuapp.com//admin/signin",
+        url: "https:/traveldgwa.herokuapp.com/admin/signin",
       }).then( res => {
         if(res.status === 200){
           window.location.href='/dashboard';
