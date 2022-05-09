@@ -1,33 +1,25 @@
 import React from 'react'
-import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
-import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
-import CheckBoxRoundedIcon from '@mui/icons-material/CheckBoxRounded';
-import MapsHomeWorkRoundedIcon from '@mui/icons-material/MapsHomeWorkRounded';
-import DirectionsCarRoundedIcon from '@mui/icons-material/DirectionsCarRounded';
-import SwapHorizRoundedIcon from '@mui/icons-material/SwapHorizRounded';
-import LocalActivityRoundedIcon from '@mui/icons-material/LocalActivityRounded';
-import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded';
-import InsertChartRoundedIcon from '@mui/icons-material/InsertChartRounded';
-import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri'
 
-export const SidebarData = [
+import { MdDashboard, MdMapsHomeWork, MdAirportShuttle, MdLocalActivity, MdAssignment, MdInsertChart } from 'react-icons/md'
+import { FaUser, FaCarSide } from 'react-icons/fa'
+import { IoCheckbox } from 'react-icons/io5'
+
+export const SideMenuData = [
     {
         title: "หน้าหลัก",
-        icon: <DashboardRoundedIcon style={{fontSize:32}} />,
+        icon: <MdDashboard />,
         link: "/dashboard"
     },
     {
         title: "ผู้ใช้ & พาร์ทเนอร์",
-        icon: <PersonRoundedIcon style={{fontSize:32}} />,
+        icon: <FaUser />,
         link: "/customer"
     },
     {
         title: "อนุมัติพาร์ทเนอร์",
-        icon: <CheckBoxRoundedIcon style={{fontSize:32}} />,
-        link: "/confirm-partner",
-        iconClosed: <RiArrowDropDownLine size={32} padding={0} />,
-        iconOpened: <RiArrowDropUpLine size={32} padding={0} />,
-        subRoutes: [
+        icon: <IoCheckbox />,
+        link: "#",
+        subMenu: [
             {
                 title: "พาร์ทเนอร์ที่พัก",
                 link: "/confirm-partner/accommodation",
@@ -48,31 +40,29 @@ export const SidebarData = [
     },
     {
         title: "พาร์ทเนอร์ที่พัก",
-        icon: <MapsHomeWorkRoundedIcon style={{fontSize:32}} />,
+        icon: <MdMapsHomeWork />,
         link: "/accommodation-partner"
     },
     {
         title: "พาร์ทเนอร์เช่ารถ",
-        icon: <DirectionsCarRoundedIcon style={{fontSize:32}} />,
+        icon: <FaCarSide />,
         link: "/rentcar-partner"
     },
     {
         title: "พาร์ทเนอร์รถ รับ - ส่ง",
-        icon: <SwapHorizRoundedIcon style={{fontSize:32}} />,
+        icon: <MdAirportShuttle />,
         link: "/shuttle-partner"
     },
     {
         title: "พาร์ทเนอร์กิจกรรม",
-        icon: <LocalActivityRoundedIcon style={{fontSize:32}} />,
+        icon: <MdLocalActivity />,
         link: "/activity-partner"
     },
     {
         title: "ข้อมูลการซื้อขาย",
-        icon: <AssignmentRoundedIcon style={{fontSize:32}} />,
-        link: "/receipt-information",
-        iconClosed: <RiArrowDropDownLine size={32} padding={0} />,
-        iconOpened: <RiArrowDropUpLine size={32} padding={0} />,
-        subRoutes: [
+        icon: <MdAssignment />,
+        link: "#",
+        subMenu: [
             {
                 title: "พาร์ทเนอร์ที่พัก",
                 link: "/confirm-partner/accommodation",
@@ -93,7 +83,7 @@ export const SidebarData = [
     },
     {
         title: "การจัดการข้อมูล",
-        icon: <InsertChartRoundedIcon style={{fontSize:32}} />,
+        icon: <MdInsertChart />,
         link: "/manage-information"
     }
 ]
