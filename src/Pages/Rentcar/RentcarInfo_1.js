@@ -11,18 +11,20 @@ import { Button } from 'react-bootstrap';
 export const RentcarInfo_1 = () => {
   const {id} = useParams();
   const [data,setData] = useState([]);
-  const getUserInfo = (id) => {
+  const [info,setInfo] = useState([]);
+  const getPartnerInfo = (id) => {
     axios({
         method : "GET",
-        url: "http://localhost:8080/admin/getuser/" + id,
+        url: "http://localhost:8080/admin/getrentcarpartner/" + id,
       }).then( res => {
             setData(res.data);
-            console.log(data);
+            setInfo(res.data.usernameID);
       });
   }
+
   useEffect(()=> {
     (async () => {
-        await getUserInfo(id);
+        await getPartnerInfo(id);
     })();
   },[]);
 
@@ -39,10 +41,10 @@ export const RentcarInfo_1 = () => {
                 <div className='Detail'>
                     <h4>ข้อมูลบริษัท</h4>
                     <ul className='Info-text'>
-                        <li className='Row'><div className='Title'>ชื่อบริษัท</div><div className='User-info'>{'คิทตี้ จำกัด มหาชน'}</div></li>
-                        <li className='Row'><div className='Title'>ที่อยู่บริษัท</div><div className='User-info'>{'123/456 Home เขตธนบุรี จังหวัด กรุงเทพมหานคร 10600'}</div></li>
-                        <li className='Row'><div className='Title'>ชื่อผู้ใช้</div><div className='User-info'>{data.realname}</div></li>
-                        <li className='Row'><div className='Title'>นามสกุล</div><div className='User-info'>{data.surname}</div></li>
+                        <li className='Row'><div className='Title'>ชื่อบริษัท</div><div className='User-info'>{data.namepartner}</div></li>
+                        <li className='Row'><div className='Title'>ที่อยู่บริษัท</div><div className='User-info'>{'ที่อยู่'}</div></li>
+                        <li className='Row'><div className='Title'>ชื่อผู้ใช้</div><div className='User-info'>{info.realname}</div></li>
+                        <li className='Row'><div className='Title'>นามสกุล</div><div className='User-info'>{info.surname}</div></li>
                         <li className='Row'><div className='Title'>อีเมล</div><div className='User-info'>{data.email}</div></li>
                         <li className='Row'><div className='Title'>เบอร์โทรศัพท์</div><div className='User-info'>{data.phone}</div></li>
                     </ul>     

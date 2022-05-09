@@ -8,17 +8,17 @@ import { RentcarAction } from '../../Components/Action/RentcarAction'
 export const Rentcar = () => {
 
   const [data, setData] = useState([]); 
-  const getUser = () => {
+  const getRentcarPartner = () => {
       axios({
           method : "GET",
-          url: "http://localhost:8080/admin/getuser",
+          url: "http://localhost:8080/admin/getrentcarpartner",
         }).then( res => {
               setData(res.data);
         });
   }
   useEffect(()=> {
       (async () => {
-          await getUser();
+          await getRentcarPartner();
       })();
   },[]); 
 
