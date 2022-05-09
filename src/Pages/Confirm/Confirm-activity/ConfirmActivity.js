@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 import { COLUMNS } from './Columns'
-import { Table } from '../../Components/Table/Table'
-import { ConfirmAction } from '../../Components/Action/ConfirmAction.js'
+import { Table } from '../../../Components/Table/Table'
+import { ConfirmActivityAction } from '../../../Components/Action/ConfirmAction/ConfirmActivityAction'
 
-
-export const Confirm = () => {
-
+export const ConfirmActivity = () => {
   const [data, setData] = useState([]); 
   const getUser = () => {
       axios({
@@ -25,9 +23,9 @@ export const Confirm = () => {
 
   return (
     <div>
-        <Table header={'อนุมัติพาร์ทเนอร์'} data={data} column={COLUMNS} Action={ConfirmAction} />                   
+        <Table header={'อนุมัติพาร์ทเนอร์กิจกรรม'} data={data} column={COLUMNS} Action={ConfirmActivityAction} />                   
     </div>
   )
 }
 
-export default Confirm
+export default ConfirmActivity

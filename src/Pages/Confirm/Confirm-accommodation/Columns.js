@@ -9,10 +9,14 @@ export const COLUMNS = [
         accessor: 'realname',
         IdName: 'Realname'
     },
-    
     {
-        Header: 'บทบาทพาร์ทเนอร์ที่ร้องขอ',
+        Header: 'นามสกุล',
         accessor: 'surname',
-        IdName: 'Role'
+        IdName: 'Surname'
+    },
+    {
+        Header: 'อีเมล',
+        accessor: 'email',
+        IdName: 'Email'
     },
 ]
