@@ -11,7 +11,7 @@ export const Confirm = () => {
   const getUser = () => {
       axios({
           method : "GET",
-          url: "https://traveldgwa.herokuapp.com//admin/getuser",
+          url: "https://traveldgwa.herokuapp.com/admin/getuser",
         }).then( res => {
               setData(res.data);
         });
