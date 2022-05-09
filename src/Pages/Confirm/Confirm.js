@@ -7,12 +7,11 @@ import { ConfirmAction } from '../../Components/Action/ConfirmAction.js'
 
 
 export const Confirm = () => {
-
   const [data, setData] = useState([]); 
   const getUser = () => {
       axios({
           method : "GET",
-          url: "http://localhost:8080/admin/getuser",
+          url: "https://traveldgwa.herokuapp.com//admin/getuser",
         }).then( res => {
               setData(res.data);
         });
