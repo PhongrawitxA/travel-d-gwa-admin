@@ -13,7 +13,7 @@ export const CustomerInfo = () => {
   const getUserInfo = (id) => {
     axios({
         method : "GET",
-        url: "http://localhost:8080/admin/getuser/" + id,
+        url: "https://traveldgwa.herokuapp.com/admin/getuser/" + id,
       }).then( res => {
             setData(res.data);
             console.log(data);

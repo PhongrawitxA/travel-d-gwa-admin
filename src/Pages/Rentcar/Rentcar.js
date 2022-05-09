@@ -11,7 +11,7 @@ export const Rentcar = () => {
   const getRentcarPartner = () => {
       axios({
           method : "GET",
-          url: "http://localhost:8080/admin/getrentcarpartner",
+          url: "https://traveldgwa.herokuapp.com/admin/getrentcarpartner",
         }).then( res => {
               setData(res.data);
         });

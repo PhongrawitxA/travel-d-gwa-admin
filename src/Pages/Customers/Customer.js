@@ -12,7 +12,7 @@ export const Customer = () => {
   const getUser = () => {
       axios({
           method : "GET",
-          url: "http://localhost:8080/admin/getuser",
+          url: "https://traveldgwa.herokuapp.com/admin/getuser",
         }).then( res => {
               setData(res.data);
         });
