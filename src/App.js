@@ -9,7 +9,10 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import Customers from './Pages/Customers/Customer';
 import { CustomerInfo } from './Pages/Customers/Info/CustomerInfo';
 
-import Confirm from './Pages/Confirm/Confirm';
+import ConfirmAccommodation from './Pages/Confirm/Confirm-accommodation/ConfirmAccommodation'
+import ConfirmRentcar from './Pages/Confirm/Confirm-rentcar/ConfirmRentcar'
+import ConfirmShuttle from './Pages/Confirm/Confirm-shuttle/ConfirmShuttle'
+import ConfirmActivity from './Pages/Confirm/Confirm-activity/ConfirmActivity'
 
 import Accommodation from './Pages/Accommodation/Accommodation';
 import { AccommodationInfo_1 } from './Pages/Accommodation/AccommodationInfo_1';
@@ -44,7 +47,10 @@ function App() {
               <Route path='/customer' element={<Customers />} />
               <Route path='/customer/info/:id' element={<CustomerInfo />} />
 
-              <Route path='/confirm-partner' element={<Confirm />} />
+            <Route path='/confirm-partner/accommodation' element={<ConfirmAccommodation />} />
+            <Route path='/confirm-partner/rentcar' element={<ConfirmRentcar />} />
+            <Route path='/confirm-partner/shuttle' element={<ConfirmShuttle />} />
+            <Route path='/confirm-partner/activity' element={<ConfirmActivity />} />
 
               <Route path='/accommodation-partner' element={<Accommodation />} />
               <Route path='/accommodation-partner/info-1/:id' element={<AccommodationInfo_1 />} />

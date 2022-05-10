@@ -26,15 +26,15 @@ export const SideMenuData = [
             },
             {
                 title: "พาร์ทเนอร์เช่ารถ",
-                link: "/confirm-partner/accommodation",
+                link: "/confirm-partner/rentcar",
             },
             {
                 title: "พาร์ทเนอร์รถ รับ - ส่ง",
-                link: "/confirm-partner/accommodation",
+                link: "/confirm-partner/shuttle",
             },
             {
                 title: "พาร์ทเนอร์กิจกรรม",
-                link: "/confirm-partner/accommodation",
+                link: "/confirm-partner/activity",
             }
         ]
     },
@@ -65,19 +65,19 @@ export const SideMenuData = [
         subMenu: [
             {
                 title: "พาร์ทเนอร์ที่พัก",
-                link: "/confirm-partner/accommodation",
+                link: "/receipt-information/accommodation",
             },
             {
                 title: "พาร์ทเนอร์เช่ารถ",
-                link: "/confirm-partner/accommodation",
+                link: "/receipt-information/rentcar",
             },
             {
                 title: "พาร์ทเนอร์รถ รับ - ส่ง",
-                link: "/confirm-partner/accommodation",
+                link: "/receipt-information/shuttle",
             },
             {
                 title: "พาร์ทเนอร์กิจกรรม",
-                link: "/confirm-partner/accommodation",
+                link: "/receipt-information/activity",
             }
         ]
     },
