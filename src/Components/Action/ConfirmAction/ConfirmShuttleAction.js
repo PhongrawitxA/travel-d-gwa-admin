@@ -28,7 +28,7 @@ export const ConfirmShuttleAction = ({id}) => {
 
             <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} className="modal" >
                 <Modal.Header className="modalHeader">
-                    <Modal.Title  className="modalTitle">คุณต้องการปฏิเสธพาร์ทเนอร์รถ รับ - ส่ง ?a</Modal.Title>
+                    <Modal.Title  className="modalTitle">คุณต้องการปฏิเสธพาร์ทเนอร์รถ รับ - ส่ง ?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modalBody">
                     ชื่อผู้ใช้ : {id.original.realname} <br/>
