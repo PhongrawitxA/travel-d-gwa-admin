@@ -82,7 +82,7 @@
     transition: all .1s ease-in-out;
 }
 
-#active {
+.SideMenu .main-menu .menu-item#active {
     color: #fff;
     background-color: #1D3557;
     border-radius: 18px;
@@ -139,8 +139,12 @@
 
 .SideMenu .main-menu .sub-menu a:hover {
     color: #1D3557;
-    font-weight: bold;
     cursor: pointer;
+}
+
+.SideMenu .main-menu .sub-menu #active a {
+    color: #1D3557;
+    font-weight: bold;
 }
 
 .SideMenu .main-menu .sub-menu.inactive {
@@ -150,7 +154,6 @@
     margin-top: 0px;
     transition: all .3s ease-in;
 }
-
 
 .SideMenu.inactive {
     width: 80px;
