@@ -22,7 +22,7 @@ export const ConfirmShuttleAction = ({id}) => {
 
   return (
     <td id='Button'>
-        <a href={'shuttle/info/' + id.original._id} id='Info'><AiFillInfoCircle size={40} />&nbsp; <div>ดูข้อมูล</div></a>
+        <a href={'shuttle/info-1/' + id.original._id} id='Info'><AiFillInfoCircle size={40} />&nbsp; <div>ดูข้อมูล</div></a>
         <>
             <a onClick={handleShow} id='Decline'><FaWindowClose size={40} />&nbsp; <div>ปฏิเสธ</div></a>
 

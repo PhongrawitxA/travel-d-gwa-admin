@@ -19,8 +19,8 @@
     color: #3C6E71;
 }
 
-#RentcarRealname {
-    width: 30%;
+#RentcarRealname, #RentcarSurname {
+    width: 15%;
 }
 
 #RentcarEmail {

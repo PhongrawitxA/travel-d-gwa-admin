@@ -10,9 +10,18 @@ import Customers from './Pages/Customers/Customer';
 import { CustomerInfo } from './Pages/Customers/Info/CustomerInfo';
 
 import ConfirmAccommodation from './Pages/Confirm/Confirm-accommodation/ConfirmAccommodation'
+import { ConfirmAccommodationInfo_1 } from './Pages/Confirm/Confirm-accommodation/ConfirmAccommodationInfo_1'
+import { ConfirmAccommodationInfo_2 } from './Pages/Confirm/Confirm-accommodation/ConfirmAccommodationInfo_2'
+import { ConfirmAccommodationInfo_3 } from './Pages/Confirm/Confirm-accommodation/ConfirmAccommodationInfo_3'
+
 import ConfirmRentcar from './Pages/Confirm/Confirm-rentcar/ConfirmRentcar'
+import { ConfirmRentcarInfo_1 } from './Pages/Confirm/Confirm-rentcar/ConfirmRentcarInfo_1'
+
 import ConfirmShuttle from './Pages/Confirm/Confirm-shuttle/ConfirmShuttle'
+import { ConfirmShuttleInfo_1 } from './Pages/Confirm/Confirm-shuttle/ConfirmShuttleInfo_1'
+
 import ConfirmActivity from './Pages/Confirm/Confirm-activity/ConfirmActivity'
+import { ConfirmActivityInfo_1 } from './Pages/Confirm/Confirm-activity/ConfirmActivityInfo_1'
 
 import Accommodation from './Pages/Accommodation/Accommodation';
 import { AccommodationInfo_1 } from './Pages/Accommodation/AccommodationInfo_1';
@@ -47,10 +56,19 @@ function App() {
               <Route path='/customer' element={<Customers />} />
               <Route path='/customer/info/:id' element={<CustomerInfo />} />
 
-            <Route path='/confirm-partner/accommodation' element={<ConfirmAccommodation />} />
-            <Route path='/confirm-partner/rentcar' element={<ConfirmRentcar />} />
-            <Route path='/confirm-partner/shuttle' element={<ConfirmShuttle />} />
-            <Route path='/confirm-partner/activity' element={<ConfirmActivity />} />
+              <Route path='/confirm-partner/accommodation' element={<ConfirmAccommodation />} />
+              <Route path='/confirm-partner/accommodation/info-1/:id' element={<ConfirmAccommodationInfo_1 />} />
+              <Route path='/confirm-partner/accommodation/info-2/:id' element={<ConfirmAccommodationInfo_2 />} />
+              <Route path='/confirm-partner/accommodation/info-3/:id' element={<ConfirmAccommodationInfo_3 />} />
+
+              <Route path='/confirm-partner/rentcar' element={<ConfirmRentcar />} />
+              <Route path='/confirm-partner/rentcar/info-1/:id' element={<ConfirmRentcarInfo_1 />} />
+
+              <Route path='/confirm-partner/shuttle' element={<ConfirmShuttle />} />
+              <Route path='/confirm-partner/shuttle/info-1/:id' element={<ConfirmShuttleInfo_1 />} />
+
+              <Route path='/confirm-partner/activity' element={<ConfirmActivity />} />
+              <Route path='/confirm-partner/activity/info-1/:id' element={<ConfirmActivityInfo_1 />} />
 
               <Route path='/accommodation-partner' element={<Accommodation />} />
               <Route path='/accommodation-partner/info-1/:id' element={<AccommodationInfo_1 />} />

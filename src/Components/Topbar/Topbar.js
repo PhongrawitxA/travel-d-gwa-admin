@@ -12,8 +12,8 @@ function Topbar() {
   return (
     <div className='Topbar'>
       <ul>
-        <li id='Chat'><a href='#'><ChatBubbleOutlineRoundedIcon style={{fontSize:30}} /></a></li>
-        <li id='Notification'><a href='#'><NotificationsNoneRoundedIcon style={{fontSize:30}} /></a></li>
+        {/* <li id='Chat'><a href='#'><ChatBubbleOutlineRoundedIcon style={{fontSize:30}} /></a></li>
+        <li id='Notification'><a href='#'><NotificationsNoneRoundedIcon style={{fontSize:30}} /></a></li> */}
         <li id='Profile'>
           <div className='Action'>
             <div className='Profile' onClick={dropdownToggle}>
@@ -23,8 +23,8 @@ function Topbar() {
             <div className='DropDown'>
               <h3>Admin1<br /><span>admin1@gmail.com</span></h3>
               <ul>
-                <li><AccountCircleOutlinedIcon className='Icon' /><a href='#'>โปรไฟล์</a></li>
-                <li><HelpOutlineOutlinedIcon className='Icon' /><a href='#'>ความช่วยเหลือ</a></li>
+                {/* <li><AccountCircleOutlinedIcon className='Icon' /><a href='#'>โปรไฟล์</a></li>
+                <li><HelpOutlineOutlinedIcon className='Icon' /><a href='#'>ความช่วยเหลือ</a></li> */}
                 <li><LogoutOutlinedIcon className='Icon' /><a href='#'>ออกจากระบบ</a></li>
               </ul>
             </div>

@@ -32,7 +32,7 @@
 }
 
 #Profile {
-    border-left: 1px solid #1D3557;
+    border-left: 2px solid #1D3557;
 }
 
 .Action .Profile {
@@ -108,7 +108,7 @@
 
 .Action .DropDown ul li{
     list-style: none;
-    padding: 12px 20px;
+    padding: 12px 10px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -118,7 +118,7 @@
     margin-right: 10px;
     color: #1D3557;
     opacity: 0.6;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .Action .DropDown ul li:hover .Icon {

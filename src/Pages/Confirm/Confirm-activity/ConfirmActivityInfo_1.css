@@ -1,0 +1,148 @@
+.ConfirmActivity-info-1  .Head {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ConfirmActivity-info-1  .Head .Button {
+    padding: 15px 120px 15px 60px;
+    font-weight: 100;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0px 10px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ConfirmActivity-info-1  .Head .Button .Decline {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    color: #F25B52;
+    transition: all .2s ease-in-out;
+}
+
+.ConfirmActivity-info-1  .Head .Button .Accept {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    color: #3C6E71;
+    transition: all .2s ease-in-out;
+}
+
+.ConfirmActivity-info-1  .Head .Button .Decline:hover {
+    color: #be4a44;
+}
+.ConfirmActivity-info-1  .Head .Button .Accept:hover {
+    color: #254647;
+}
+
+.ConfirmActivity-info-1 .Container {
+    padding: 50px;
+    margin: 30px 0 0 0;
+    height: 680px;
+    width: 96%;
+    border-radius: 20px;
+    background-color: #1D3557;
+    color: #FFF;
+    display: flex;
+}
+
+.ConfirmActivity-info-1 a {
+    cursor: pointer;
+}
+
+.ConfirmActivity-info-1 h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.ConfirmActivity-info-1 h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.ConfirmActivity-info-1 .Container .Info-text {
+    font-size: 20px;
+    color: #d9d9d9;
+    padding: 0;
+}
+
+.ConfirmActivity-info-1 .Container .Title {
+    display: grid;
+    width: 30%;
+    font-weight: bold;    
+    height: auto;
+    color: #FFF;
+}
+
+
+.ConfirmActivity-info-1 .Container .User-info {
+    display: grid;
+    width: 80%;
+    height: auto;
+}
+
+.ConfirmActivity-info-1 .Container .Info .Info-text .Row {
+    padding-bottom: 50px;
+    width: 430px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.ConfirmActivity-info-1 .Container .Info-text .Row {
+    padding-bottom: 15px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.ConfirmActivity-info-1 .Container .Left {
+    width: 40%;
+    padding-right: 20px;
+}
+
+.ConfirmActivity-info-1 .Container .Right {
+    width: 60%;
+}
+
+.ConfirmActivity-info-1 .Container .Right .Card{
+    margin-top: 50px;
+}
+
+.ConfirmActivity-info-1  .Footer {
+    padding-right: 100px;
+    padding-bottom: 30px;
+}
+
+.ConfirmActivity-info-1  .Footer .Button {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #1D3557;
+    margin-left: 20px;
+    border-radius: 15px;
+    width: 100px;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 10px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+.ConfirmActivity-info-1  .Footer .Button:hover {
+    color: #fff;
+    background-color: #1D3557
+}
+
+.ConfirmActivity-info-1  .Footer .Button:disabled {
+    cursor: not-allowed;
+    color: #fff;
+    background-color: #D9D9D9;
+}

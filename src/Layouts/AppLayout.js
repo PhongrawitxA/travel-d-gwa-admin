@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import Sidebar from '../Components/Sidebar/Sidebar';
-import SideMenu from '../Components/Sidebar1/SideMenu'
+import SideMenu from '../Components/Sidebar/SideMenu'
 import Topbar from '../Components/Topbar/Topbar';
 
 import './AppLayout.css';

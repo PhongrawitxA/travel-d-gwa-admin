@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
+import {SampleContext} from '../../../contexts/SampleContext';
 
 import { COLUMNS } from './Columns'
 import { Table } from '../../../Components/Table/Table'
 import { ConfirmAccommodationAction } from '../../../Components/Action/ConfirmAction/ConfirmAccommodationAction'
 
 export const ConfirmAccommodation = () => {
+
+  const {Url} = useContext(SampleContext)
+
   const [data, setData] = useState([]); 
   const getUser = () => {
       axios({
           method : "GET",
-          url: "http://localhost:8080/admin/getuser",
+          url: Url + "/admin/getuser",
         }).then( res => {
               setData(res.data);
         });
