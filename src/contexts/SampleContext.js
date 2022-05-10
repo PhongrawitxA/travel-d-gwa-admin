@@ -4,9 +4,7 @@ const SampleContextProvider = (props) => {
     const Url = "https://traveldgwa-backend.herokuapp.com"
     return (
          <SampleContext.Provider 
-            value={{
-                Url
-             }}>
+            value={{Url}}>
                {props.children}
          </SampleContext.Provider>
     )

@@ -34,8 +34,8 @@ import SampleContextProvider from './contexts/SampleContext';
 function App() {
   return (
     <Fragment>
-      <div className='App'>
-        <SampleContextProvider>
+      <SampleContextProvider>
+        <div className='App'>
           <BrowserRouter>
             <Routes>
               <Route path='/' element={<Login />} />
@@ -69,8 +69,8 @@ function App() {
               </Route>
             </Routes>
           </BrowserRouter>
-        </SampleContextProvider>
-      </div>
+        </div>
+      </SampleContextProvider>
     </Fragment>
   );
 }

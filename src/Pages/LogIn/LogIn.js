@@ -5,11 +5,11 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import axios from "axios";
 import './LogIn.css';
-import SampleContext from '../../contexts/SampleContext';
+import {SampleContext} from '../../contexts/SampleContext';
 
 export default function LogIn() {
 
-  const Url = useContext(SampleContext)
+  const {Url} = useContext(SampleContext)
   
   const [email , setEmail] = useState();
   const [password , setPassword] = useState();
@@ -21,7 +21,7 @@ export default function LogIn() {
           email : email,
           password : password
         },
-        url: `${Url}/admin/signin`,
+        url: Url+"/admin/signin",
       }).then( res => {
         if(res.status === 200){
           window.location.href='/dashboard';
@@ -33,7 +33,7 @@ export default function LogIn() {
   
     const handleSubmit = async (event) => {
       event.preventDefault();
-      console.log(Url);
+      console.log(Url)
       await login();
     
     };
