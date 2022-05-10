@@ -1,15 +1,15 @@
 import * as React from 'react';
-import {useState,useContext} from 'react';
+import {Fragment,useState,useContext} from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import axios from "axios";
 import './LogIn.css';
-import SampleContext from '../../contexts/context';
+import SampleContext from '../../contexts/SampleContext';
 
 export default function LogIn() {
 
-  const {Url} = useContext(SampleContext)
+  const Url = useContext(SampleContext)
   
   const [email , setEmail] = useState();
   const [password , setPassword] = useState();
@@ -38,6 +38,7 @@ export default function LogIn() {
     };
 
     return (
+      <Fragment>
         <div className='Login' style={{display: 'flex',justifyContent:'center',position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
             <Box sx={{
                     width: 450,
@@ -93,5 +94,6 @@ export default function LogIn() {
                 </Box>
             </Box>
         </div>
+      </Fragment>
     );
 }

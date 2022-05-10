@@ -1,6 +1,6 @@
 import './Assets/Styles/App.css';
 
-import React from 'react';
+import React,{ Fragment } from 'react';
 
 import Login from './Pages/LogIn/LogIn';
 import AppLayout from './Layouts/AppLayout';
@@ -29,47 +29,49 @@ import Receipt from './Pages/Receipt/Receipt';
 import Manage from './Pages/Manage/Manage';
 
 import { BrowserRouter , Route , Routes} from "react-router-dom";
-import SampleContextProvider from './contexts/context'
+import SampleContextProvider from './contexts/SampleContext';
 
 function App() {
   return (
-    <div className='App'>
-      <SampleContextProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<Login />} />
-            <Route element={<AppLayout/>}>
-              <Route path='/dashboard' element = {<Dashboard/>} />
+    <Fragment>
+      <div className='App'>
+        <SampleContextProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path='/' element={<Login />} />
+              <Route element={<AppLayout/>}>
+                <Route path='/dashboard' element = {<Dashboard/>} />
 
-              <Route path='/customer' element={<Customers />} />
-              <Route path='/customer/info/:id' element={<CustomerInfo />} />
+                <Route path='/customer' element={<Customers />} />
+                <Route path='/customer/info/:id' element={<CustomerInfo />} />
 
-              <Route path='/confirm-partner' element={<Confirm />} />
+                <Route path='/confirm-partner' element={<Confirm />} />
 
-              <Route path='/accommodation-partner' element={<Accommodation />} />
-              <Route path='/accommodation-partner/info-1/:id' element={<AccommodationInfo_1 />} />
-              <Route path='/accommodation-partner/info-2/:id' element={<AccommodationInfo_2 />} />
-              <Route path='/accommodation-partner/info-3/:id' element={<AccommodationInfo_3 />} />
-
-
-              <Route path='/rentcar-partner' element={<Rentcar />} />
-              <Route path='/rentcar-partner/info-1/:id' element={<RentcarInfo_1 />} />
-
-              <Route path='/shuttle-partner' element={<Shuttle />} />
-              <Route path='/shuttle-partner/info-1/:id' element={<ShuttleInfo_1 />} />
+                <Route path='/accommodation-partner' element={<Accommodation />} />
+                <Route path='/accommodation-partner/info-1/:id' element={<AccommodationInfo_1 />} />
+                <Route path='/accommodation-partner/info-2/:id' element={<AccommodationInfo_2 />} />
+                <Route path='/accommodation-partner/info-3/:id' element={<AccommodationInfo_3 />} />
 
 
-              <Route path='/activity-partner' element={<Activity />} />
-              <Route path='/activity-partner/info-1/:id' element={<ActivityInfo_1 />} />
+                <Route path='/rentcar-partner' element={<Rentcar />} />
+                <Route path='/rentcar-partner/info-1/:id' element={<RentcarInfo_1 />} />
 
-              <Route path='/receipt-information' element={<Receipt />} />
-              
-              <Route path='/manage-information' element={<Manage />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </SampleContextProvider>
-    </div>
+                <Route path='/shuttle-partner' element={<Shuttle />} />
+                <Route path='/shuttle-partner/info-1/:id' element={<ShuttleInfo_1 />} />
+
+
+                <Route path='/activity-partner' element={<Activity />} />
+                <Route path='/activity-partner/info-1/:id' element={<ActivityInfo_1 />} />
+
+                <Route path='/receipt-information' element={<Receipt />} />
+                
+                <Route path='/manage-information' element={<Manage />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </SampleContextProvider>
+      </div>
+    </Fragment>
   );
 }
 

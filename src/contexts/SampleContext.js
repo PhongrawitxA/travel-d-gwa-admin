@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react'
 export const SampleContext = createContext()
 const SampleContextProvider = (props) => {
-    const Url = "https://traveldgwa-backend.herokuapp.com"
+    const Url = "http://localhost:8080"
     return (
          <SampleContext.Provider 
             value={{
