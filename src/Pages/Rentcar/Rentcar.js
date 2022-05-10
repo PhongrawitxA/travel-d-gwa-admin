@@ -13,7 +13,7 @@ export const Rentcar = () => {
   const getRentcarPartner = () => {
       axios({
           method : "GET",
-          url: Url+"admin/getrentcarpartner",
+          url: Url+"/admin/getrentcarpartner",
         }).then( res => {
               setData(res.data);
         });
