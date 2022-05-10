@@ -1,12 +1,15 @@
 import * as React from 'react';
-import {useState} from 'react';
+import {useState,useContext} from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import axios from "axios";
 import './LogIn.css';
+import { SampleContext } from '../../contexts/context';
 
 export default function LogIn() {
+
+  const {Url} = useContext(SampleContext)
   
   const [email , setEmail] = useState();
   const [password , setPassword] = useState();
@@ -18,7 +21,7 @@ export default function LogIn() {
           email : email,
           password : password
         },
-        url: "https://traveldgwa.herokuapp.com/admin/signin",
+        url: "https://${Url}/admin/signin",
       }).then( res => {
         if(res.status === 200){
           window.location.href='/dashboard';
