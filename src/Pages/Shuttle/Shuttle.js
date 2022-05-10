@@ -1,24 +1,26 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState , useContext } from 'react'
 import axios from 'axios'
 
 import { COLUMNS } from './Columns'
 import { Table } from '../../Components/Table/Table'
 import { ShuttleAction } from '../../Components/Action/ShuttleAction'
+import {SampleContext} from '../../contexts/SampleContext';
 
 export const Shuttle = () => {
 
+  const {Url} = useContext(SampleContext)
   const [data, setData] = useState([]); 
-  const getUser = () => {
+  const getShuttlePartner = () => {
       axios({
           method : "GET",
-          url: "http://localhost:8080/admin/getuser",
+          url: Url+"/admin/getshuttlepartner",
         }).then( res => {
               setData(res.data);
         });
   }
   useEffect(()=> {
       (async () => {
-          await getUser();
+          await getShuttlePartner();
       })();
   },[]);
 

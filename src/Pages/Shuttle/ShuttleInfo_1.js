@@ -1,4 +1,4 @@
-import React , {useState,useEffect} from 'react'
+import React , {useState,useEffect,useContext} from 'react'
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
 import './ShuttleInfo_1.css'
@@ -6,23 +6,25 @@ import './ShuttleInfo_1.css'
 import { GrFormPrevious } from 'react-icons/gr'
 import { HiArrowCircleUp } from 'react-icons/hi'
 import { Button } from 'react-bootstrap';
+import {SampleContext} from '../../contexts/SampleContext';
 
 
 export const ShuttleInfo_1 = () => {
+  const {Url} = useContext(SampleContext)
   const {id} = useParams();
-  const [data,setData] = useState([]);
-  const getUserInfo = (id) => {
+  const [shuttle,setShuttle] = useState([]);
+  const getShuttlePartnerInfo = (id) => {
     axios({
         method : "GET",
-        url: "http://localhost:8080/admin/getuser/" + id,
-      }).then( res => {
-            setData(res.data);
-            console.log(data);
+        url: Url+"/admin/getshuttlepartner/" + id,
+      }).then( (res) => {
+            console.log(res.data);
+            setShuttle(res.data);
       });
   }
   useEffect(()=> {
     (async () => {
-        await getUserInfo(id);
+        await getShuttlePartnerInfo(id);
     })();
   },[]);
 
@@ -39,16 +41,16 @@ export const ShuttleInfo_1 = () => {
                 <div className='Detail'>
                     <h4>ข้อมูลส่วนตัว</h4>
                     <ul className='Info-text'>
-                        <li className='Row'><div className='Title'>ชื่อผู้ใช้</div><div className='User-info'>{data.realname}</div></li>
-                        <li className='Row'><div className='Title'>นามสกุล</div><div className='User-info'>{data.surname}</div></li>
-                        <li className='Row'><div className='Title'>อีเมล</div><div className='User-info'>{data.email}</div></li>
-                        <li className='Row'><div className='Title'>เบอร์โทรศัพท์</div><div className='User-info'>{data.phone}</div></li>
+                        <li className='Row'><div className='Title'>ชื่อผู้ใช้</div><div className='User-info'>{(shuttle.usernameID || []).realname}</div></li>
+                        <li className='Row'><div className='Title'>นามสกุล</div><div className='User-info'>{(shuttle.usernameID || []).surname}</div></li>
+                        <li className='Row'><div className='Title'>อีเมล</div><div className='User-info'>{shuttle.email}</div></li>
+                        <li className='Row'><div className='Title'>เบอร์โทรศัพท์</div><div className='User-info'>{(shuttle.usernameID || []).phone}</div></li>
                     </ul> 
                     <h4>ข้อมูลเกี่ยวรถ รับ - ส่ง</h4>
                     <ul className='Info-text'>
-                        <li className='Row'><div className='Title'>บริเวณที่รับ - ส่ง</div><div className='User-info'>{'บุคคโล -  ธนบุรี'}</div></li>
-                        <li className='Row'><div className='Title'>รุ่นของรถที่ขับ</div><div className='User-info'>{'ฮอนด้า'}</div></li>
-                        <li className='Row'><div className='Title'>ทะเบียนรถ</div><div className='User-info'>{'กท 1234'}</div></li>
+                        <li className='Row'><div className='Title'>บริเวณที่รับ - ส่ง</div><div className='User-info'>{shuttle.province + " - " + shuttle.district}</div></li>
+                        <li className='Row'><div className='Title'>รุ่นของรถที่ขับ</div><div className='User-info'>{shuttle.car_brand}</div></li>
+                        <li className='Row'><div className='Title'>ทะเบียนรถ</div><div className='User-info'>{shuttle.car_registration}</div></li>
                     </ul>       
                 </div>
             </div> 
