@@ -4,30 +4,32 @@ import axios from "axios";
 import { COLUMNS } from './Columns';
 import { Table } from '../../Components/Table/Table';
 import { CustomerAction } from '../../Components/Action/CustomerAction';
+import {SampleContext} from '../../contexts/SampleContext';
 
 
 export const Customer = () => {
 
-  const [data,setData] = useState([]); 
-  const getUser = () => {
-      axios({
-          method : "GET",
-          url: "https://traveldgwa.herokuapp.com/admin/getuser",
+    const {Url} = useContext(SampleContext)
+    const [data,setData] = useState([]); 
+    const getUser = () => {
+        axios({
+            method : "GET",
+            url: Url+"/admin/getuser",
         }).then( res => {
-              setData(res.data);
+                setData(res.data);
         });
-  }
-  useEffect(()=> {
-      (async () => {
-          await getUser();
-      })();
-  },[]);
+    }
+    useEffect(()=> {
+        (async () => {
+            await getUser();
+        })();
+    },[]);
 
-  return (
-      <div>
-          <Table header={'ผู้ใช้ & พาร์ทเนอร์'} data={data} column={COLUMNS} Action={CustomerAction} />                   
-      </div>
-  )
+    return (
+        <div>
+            <Table header={'ผู้ใช้ & พาร์ทเนอร์'} data={data} column={COLUMNS} Action={CustomerAction} />                   
+        </div>
+    )
 }
 
 export default Customer

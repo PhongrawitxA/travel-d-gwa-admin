@@ -33,7 +33,6 @@ export default function LogIn() {
   
     const handleSubmit = async (event) => {
       event.preventDefault();
-      console.log(Url)
       await login();
     
     };

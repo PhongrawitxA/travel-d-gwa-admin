@@ -4,14 +4,16 @@ import axios from 'axios'
 import { COLUMNS } from './Columns'
 import { Table } from '../../Components/Table/Table'
 import { RentcarAction } from '../../Components/Action/RentcarAction'
+import {SampleContext} from '../../contexts/SampleContext';
 
 export const Rentcar = () => {
 
+  const {Url} = useContext(SampleContext)
   const [data, setData] = useState([]); 
   const getRentcarPartner = () => {
       axios({
           method : "GET",
-          url: "https://traveldgwa.herokuapp.com/admin/getrentcarpartner",
+          url: Url+"admin/getrentcarpartner",
         }).then( res => {
               setData(res.data);
         });
