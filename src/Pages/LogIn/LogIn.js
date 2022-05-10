@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import axios from "axios";
 import './LogIn.css';
-import { SampleContext } from '../../contexts/context';
+import SampleContext from '../../contexts/context';
 
 export default function LogIn() {
 
