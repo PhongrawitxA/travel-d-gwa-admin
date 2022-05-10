@@ -21,7 +21,7 @@ export default function LogIn() {
           email : email,
           password : password
         },
-        url: "${Url}/admin/signin",
+        url: Url+"/admin/signin",
       }).then( res => {
         if(res.status === 200){
           window.location.href='/dashboard';
