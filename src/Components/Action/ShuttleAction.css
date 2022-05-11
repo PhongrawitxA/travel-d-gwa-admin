@@ -12,6 +12,7 @@
 
 #ShuttleInfo, #ShuttleEdit, #ShuttleDelete {
     cursor: pointer !important;
+    transition: all .1s ease-in-out;
 }
 
 #ShuttleInfo:hover, #ShuttleEdit:hover, #ShuttleDelete:hover {

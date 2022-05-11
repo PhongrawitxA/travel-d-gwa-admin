@@ -12,6 +12,7 @@
 
 #ActivityInfo, #ActivityEdit, #ActivityDelete {
     cursor: pointer !important;
+    transition: all .1s ease-in-out;
 }
 
 #ActivityInfo:hover, #ActivityEdit:hover, #ActivityDelete:hover {

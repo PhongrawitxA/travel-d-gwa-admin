@@ -12,6 +12,7 @@
 
 #CustomerInfo, #CustomerUpgrade, #CustomerDelete {
     cursor: pointer !important;
+    transition: all .1s ease-in-out;
 }
 
 #CustomerInfo:hover, #CustomerUpgrade:hover, #CustomerDelete:hover {

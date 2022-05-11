@@ -1,11 +1,46 @@
 .RentcarPartner-info-1 .Head {
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.RentcarPartner-info-1 .Head .Button {
+    padding: 15px 120px 15px 60px;
+    font-weight: 100;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0px 10px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.RentcarPartner-info-1 .Head .Button .Delete {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    color: #F25B52;
+    transition: all .2s ease-in-out;
+}
+
+.RentcarPartner-info-1 .Head .Button .Edit {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    color: #3C6E71;
+    transition: all .2s ease-in-out;
+}
+
+.RentcarPartner-info-1 .Head .Button .Delete:hover {
+    color: #be4a44;
+}
+.RentcarPartner-info-1 .Head .Button .Edit:hover {
+    color: #254647;
 }
 
 .RentcarPartner-info-1 .Container {
     padding: 50px;
-    margin: 40px 0 0 0;
-    height: 720px;
+    margin: 30px 0 0 0;
+    height: 680px;
     width: 96%;
     border-radius: 20px;
     background-color: #1D3557;
@@ -84,18 +119,32 @@
 
 .RentcarPartner-info-1 .Footer {
     padding-right: 100px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 .RentcarPartner-info-1 .Footer .Button {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #1D3557;
     margin-left: 20px;
     border-radius: 15px;
     width: 100px;
     height: 40px;
-    background-color: #3C6E71;
+    background-color: #fff;
     border: none;
+    box-shadow: 0px 10px 15px 0 rgba(0, 0, 0, 0.4);
 }
 
 .RentcarPartner-info-1 .Footer .Button:hover {
-    background-color: #254647
+    color: #fff;
+    background-color: #1D3557
+}
+
+.RentcarPartner-info-1 .Footer .Button:disabled {
+    cursor: not-allowed;
+    color: #fff;
+    background-color: #D9D9D9;
 }

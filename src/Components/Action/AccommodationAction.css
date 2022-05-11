@@ -12,6 +12,7 @@
 
 #AccommodationInfo, #AccommodationEdit, #AccommodationDelete {
     cursor: pointer !important;
+    transition: all .1s ease-in-out;
 }
 
 #AccommodationInfo:hover, #AccommodationEdit:hover, #AccommodationDelete:hover {

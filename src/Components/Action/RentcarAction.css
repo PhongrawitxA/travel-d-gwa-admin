@@ -12,6 +12,7 @@
 
 #RentcarInfo, #RentcarEdit, #RentcarDelete {
     cursor: pointer !important;
+    transition: all .1s ease-in-out;
 }
 
 #RentcarInfo:hover, #RentcarEdit:hover, #RentcarDelete:hover {

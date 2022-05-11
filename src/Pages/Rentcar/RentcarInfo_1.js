@@ -1,12 +1,15 @@
 import React , {useState,useEffect,useContext} from 'react'
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
+import {SampleContext} from '../../contexts/SampleContext';
+
 import './RentcarInfo_1.css'
+import { Button, Modal, render} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { GrFormPrevious } from 'react-icons/gr'
-import { HiArrowCircleUp } from 'react-icons/hi'
-import { Button } from 'react-bootstrap';
-import {SampleContext} from '../../contexts/SampleContext';
+import { AiFillEdit } from 'react-icons/ai'
+import { FaTrash } from 'react-icons/fa'
 
 export const RentcarInfo_1 = () => {
     const {Url} = useContext(SampleContext)
@@ -22,23 +25,47 @@ export const RentcarInfo_1 = () => {
         });
     }
 
-    // const show = () => {
-    //     console.log(carInfo.PartnerID.email);
-    // }
-
     useEffect(()=> {
         (async () => {
             await getPartnerInfo(id);
         })();
     },[]);
 
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <div className='RentcarPartner-info-1'>
             <div className='Head'>
                 <h2>
-                <a href="/rentcar-partner"><GrFormPrevious size={50} /></a>
-                พาร์ทเนอร์เช่ารถ / ข้อมูล-1
+                    <a href="/rentcar-partner"><GrFormPrevious size={50} /></a>
+                    พาร์ทเนอร์เช่ารถ / ข้อมูล-1
                 </h2>
+                <div className='Button'>
+                    <>
+                        <a className='Edit'><AiFillEdit size={40} />&nbsp; <div>แก้ไขข้อมูล</div></a>
+                    </>
+                    <>
+                        <a onClick={handleShow} className='Delete'><FaTrash size={40} />&nbsp; <div>ลบพาร์ทเนอร์</div></a>
+
+                        <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
+                            <Modal.Header className="modalHeader">
+                                <Modal.Title  className="modalTitle">คุณต้องการลบพาร์ทเนอร์เช่ารถ ?</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body className="modalBody">
+                                ชื่อบริษัท : {carInfo.car_partnername} <br/>
+                                ชื่อผู้ใช้ : {carInfo.nameOfUser} <br/>
+                                อีเมล : {(carInfo.PartnerID || []).email}
+                            </Modal.Body>
+                            <Modal.Footer className="modalFooter">
+                                <Button variant="secondary" className="modalButtonSecondary" onClick={handleClose}>ยกเลิก</Button>
+                                <Button variant="primary" className="modalButtonPrimary" onClick={handleClose}>ยืนยัน</Button>
+                            </Modal.Footer>
+                        </Modal>
+                    </>
+                </div>
             </div>
             <div className='Container'>
                 <div className='Left'>
@@ -66,8 +93,8 @@ export const RentcarInfo_1 = () => {
                 </div>   
             </div>       
             <div className='Footer'>
-                <Button className='Button' id='Back' href={'/Rentcar-partner/info-2/' + id} disabled>ย้อนกลับ</Button>
-                <Button className='Button' id='Next' href={'/Rentcar-partner/info-4/' + id} disabled><span>ถัดไป</span></Button>
+                <button className='Button' id='Back' href='#' disabled>ย้อนกลับ</button>
+                <button className='Button' id='Next' href={'/Activity-partner/info-2/' + id} disabled><span>ถัดไป</span></button>
             </div>    
         </div>
     )

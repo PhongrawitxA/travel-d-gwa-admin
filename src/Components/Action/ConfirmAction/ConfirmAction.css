@@ -5,6 +5,7 @@
 #Info:hover, #Decline:hover, #Accept:hover{
     cursor: pointer !important;
     color: #3C6E71;
+    transition: all .1s ease-in-out;
 }
 
 th#ConfirmRentcarName, th#ConfirmRentcarEmail {

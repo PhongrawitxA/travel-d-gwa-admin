@@ -27,7 +27,7 @@ export const ActivityAction = ({id}) => {
     return (
         <td id='Button' className='Confirm'>
             <a href={'activity-partner/info-1/' + id.original._id} id='ActivityInfo'><AiFillInfoCircle size={40} />&nbsp; <div>ดูข้อมูล</div></a>
-            <a href={'activity-partner/info-1/' + id.original._id} id='ActivityMessage'><AiFillEdit size={40} />&nbsp; <div>แก้ไขข้อมูล</div></a>
+            <a href={'activity-partner/info-1/' + id.original._id} id='ActivityEdit'><AiFillEdit size={40} />&nbsp; <div>แก้ไขข้อมูล</div></a>
 
             <a onClick={handleShow} id='ActivityDelete'><FaTrash size={40} />&nbsp; <div>ลบพาร์ทเนอร์</div></a>
             <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} className="modal">

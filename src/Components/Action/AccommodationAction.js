@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Button, Modal, render} from 'react-bootstrap';
 
 import { AiFillInfoCircle, AiFillEdit } from 'react-icons/ai'
-import { IoChatboxEllipses } from 'react-icons/io5'
 import { FaTrash } from 'react-icons/fa'
 
 
