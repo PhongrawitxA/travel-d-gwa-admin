@@ -37,29 +37,100 @@ th#Total {
 }
 
 .modal {
-    padding-top: 15%;
+    padding-top: 5%;
 }
 
 .modalHeader {
     justify-content: center;
     border: none;
+    background-color: #ECFAFF;
 }
 
 .modalTitle {
     padding-top: 15px;
     font-weight: bold;
     color: #1D3557;
+    background-color: #ECFAFF;
 }
 
 .modalBody {
-    padding: 30px 50px 40px 50px;
+    padding: 30px 40px 40px 40px;
+    font-size: 18px;
+    background-color: #ECFAFF;
+}
+
+.modalBody .top-section {
+    padding-bottom: 15px;
+    border-bottom: 2px dotted #827E7E;
+}
+
+.modalBody .top-section .first{
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalBody .top-section .first #transaction-id{
+    color: #827E7E;
+}
+
+.modalBody .top-section .second{
+    color: #827E7E;
+}
+
+.modalBody .top-section .second .detail-title {
     font-size: 18px;
 }
 
-.modalFooter {
+.modalBody .top-section .second .detail {
+    font-size: 16px;
+}
+
+.modalBody .body-section {
+    font-size: 16px;
+    margin-bottom: 100px;
+}
+
+.modalBody .body-section table tr{
     border: none;
+    background-color: #ECFAFF !important;
+    color: #1D3557;
+}
+
+.modalBody .body-section table th{
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.modalBody .body-section table th#number{
+    text-align: start;
+}
+
+.modalBody .body-section table td{
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.modalBody .body-section table td.price{
+    text-align: end;
+}
+
+.modalBody .body-section table td.number{
+    text-align: start;
+}
+
+.modalBody .body-section table tr.total td{
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.modalFooter {
+    border: 1px #827E7E;
     padding: 0 80px 20px 80px;
-    justify-content: space-between;
+    justify-content: center;
+    background-color: #ECFAFF;
 }
 
 .modalButtonPrimary, .modalButtonSecondary {
