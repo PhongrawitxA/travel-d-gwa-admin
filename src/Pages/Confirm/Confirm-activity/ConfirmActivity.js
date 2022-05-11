@@ -12,17 +12,17 @@ export const ConfirmActivity = () => {
 
   const [data, setData] = useState([]); 
 
-  const getUser = () => {
+  const getActivityRegister = () => {
       axios({
           method : "GET",
-          url: Url + "/admin/getuser",
+          url: Url + "/admin/getactivityregister",
         }).then( res => {
               setData(res.data);
         });
   }
   useEffect(()=> {
       (async () => {
-          await getUser();
+          await getActivityRegister();
       })();
   },[]);
 
