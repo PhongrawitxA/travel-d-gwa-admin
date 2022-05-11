@@ -37,7 +37,11 @@ import { ShuttleInfo_1 } from './Pages/Shuttle/ShuttleInfo_1'
 import Activity from './Pages/Activity/Activity';
 import { ActivityInfo_1 } from './Pages/Activity/ActivityInfo_1'
 
-import Receipt from './Pages/Receipt/Receipt';
+import ReceiptAccommodation from './Pages/Receipt/Receipt-accommodation/ReceiptAccommodation';
+import ReceiptRentcar from './Pages/Receipt/Receipt-rentcar/ReceiptRentcar';
+import ReceiptShuttle from './Pages/Receipt/Receipt-shuttle/ReceiptShuttle';
+import ReceiptActivity from './Pages/Receipt/Receipt-activity/ReceiptActivity';
+
 import Manage from './Pages/Manage/Manage';
 
 import { BrowserRouter , Route , Routes} from "react-router-dom";
@@ -86,7 +90,10 @@ function App() {
               <Route path='/activity-partner' element={<Activity />} />
               <Route path='/activity-partner/info-1/:id' element={<ActivityInfo_1 />} />
 
-              <Route path='/receipt-information' element={<Receipt />} />
+              <Route path='/receipt-information/accommodation' element={<ReceiptAccommodation />} />
+              <Route path='/receipt-information/rentcar' element={<ReceiptRentcar />} />
+              <Route path='/receipt-information/shuttle' element={<ReceiptShuttle/>} />
+              <Route path='/receipt-information/activity' element={<ReceiptActivity />} />
               
               <Route path='/manage-information' element={<Manage />} />
             </Route>

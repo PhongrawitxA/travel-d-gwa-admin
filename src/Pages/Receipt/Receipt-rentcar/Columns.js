@@ -9,11 +9,15 @@ export const COLUMNS = [
         accessor: 'realname',
         IdName: 'Realname'
     },
-    
     {
-        Header: 'รายละเอียด',
-        accessor: 'detail',
-        IdName: 'Detail'
+        Header: 'นามสกุล',
+        accessor: 'surname',
+        IdName: 'Surname'
+    },
+    {
+        Header: 'อีเมล',
+        accessor: 'email',
+        IdName: 'Email'
     },
     {
         Header: 'วันที่ชำระเงิน',

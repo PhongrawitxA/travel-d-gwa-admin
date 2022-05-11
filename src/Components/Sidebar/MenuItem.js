@@ -5,7 +5,7 @@ import { RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri'
 
 const MenuItem = (props) => {
 
-  const { title, subMenu, icon, onClick, link, exact } = props;
+  const { title, subMenu, icon, onClick, link, checkActive, exact } = props;
   const [expand, setExpand] = useState(false);
 
   return (
@@ -14,7 +14,7 @@ const MenuItem = (props) => {
         exact
         href={link}
         className={'menu-item'}
-        id={window.location.pathname === link ? "active" : ""}
+        id={(window.location.pathname.split('/')).includes(checkActive) ? "active" : ""}
         onClick={() => setExpand(!expand)}
       >
         <div  className="menu-icon">
@@ -23,14 +23,23 @@ const MenuItem = (props) => {
         <span>{title}</span>
         <div className="dropdown-icon">
           {subMenu && subMenu.length > 0 ? (
-            expand ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />
+            expand 
+            ? ((window.location.pathname.split('/')).includes(checkActive) ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />) 
+            : ((window.location.pathname.split('/')).includes(checkActive) ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />)
           ): null}
         </div>
       </a>
       {subMenu && subMenu.length > 0 ? (
-        <ul className={`sub-menu ${expand ? "" : "inactive"}`}>
+        <ul 
+        className={`sub-menu ${expand 
+          ? ((window.location.pathname.split('/')).includes(checkActive) ? "inactive" : "") 
+          : ((window.location.pathname.split('/')).includes(checkActive) ? "" : "inactive")
+        }`} >
           {subMenu.map((menu, index) => (
-            <li key={index}>
+            <li 
+            key={index} 
+            id={(window.location.pathname.split('/')).includes(menu.checkActive) 
+            && (window.location.pathname.split('/')).includes(checkActive) ? "active" : ""} >
               <a href={menu.link}>{menu.title}</a>
             </li>
           ))}

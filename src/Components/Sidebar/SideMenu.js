@@ -37,7 +37,7 @@ const SideMenu = (props) => {
         <div className='top-section'>
             <div className='logo'>
                 <img src={Logo_blue_plane} alt='webscript' />
-            </div>      
+            </div>
             <div 
                 className='toggle-menu' 
                 onClick={() => {
@@ -56,6 +56,7 @@ const SideMenu = (props) => {
                     icon={SideMenuData.icon} 
                     title={SideMenuData.title} 
                     link={SideMenuData.link} 
+                    checkActive={SideMenuData.checkActive}
                     subMenu={SideMenuData.subMenu || []} 
                     onClick={() => {
                         if(inactive){
