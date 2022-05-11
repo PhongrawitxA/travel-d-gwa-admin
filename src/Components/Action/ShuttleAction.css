@@ -1,4 +1,4 @@
-#ShuttleInfo {
+/* #ShuttleInfo {
     flex: 30%;
 }
 
@@ -8,23 +8,27 @@
 
 #ShuttleDelete {
     flex: 35%;
-}
+} */
 
-#ShuttleInfo, #ShuttleMessage, #ShuttleDelete {
+#ShuttleInfo, #ShuttleEdit, #ShuttleDelete {
     cursor: pointer !important;
+    transition: all .1s ease-in-out;
 }
 
-#ShuttleInfo:hover, #ShuttleMessage:hover, #ShuttleDelete:hover {
+#ShuttleInfo:hover, #ShuttleEdit:hover, #ShuttleDelete:hover {
     cursor: pointer !important;
     color: #3C6E71;
 }
 
-#ShuttleRealname {
-    width: 30%;
+th#ShuttleRealname, th#ShuttleSurname, th#ShuttleEmail {
+    width: 300px;
 }
 
-#ShuttleEmail {
-    width: 30%;
+td.ShuttleRealname, td.ShuttleSurname, td.ShuttleEmail {
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .modal {

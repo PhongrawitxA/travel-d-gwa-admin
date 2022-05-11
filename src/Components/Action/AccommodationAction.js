@@ -5,8 +5,7 @@ import './AccommodationAction.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Button, Modal, render} from 'react-bootstrap';
 
-import { AiFillInfoCircle } from 'react-icons/ai'
-import { IoChatboxEllipses } from 'react-icons/io5'
+import { AiFillInfoCircle, AiFillEdit } from 'react-icons/ai'
 import { FaTrash } from 'react-icons/fa'
 
 
@@ -28,7 +27,7 @@ export const AccommodationAction = ({id}) => {
     return (
         <td id='Button'>
             <a href={'accommodation-partner/info-1/' + id.original._id} id='AccommodationInfo'><AiFillInfoCircle size={40} />&nbsp; <div>ดูข้อมูล</div></a>
-            <a href={'accommodation-partner/info-1/' + id.original._id} id='AccommodationMessage'><IoChatboxEllipses size={40} />&nbsp; <div>ส่งการแจ้งเตือน</div></a>
+            <a href={'accommodation-partner/info-1/' + id.original._id} id='AccommodationEdit'><AiFillEdit size={40} />&nbsp; <div>แก้ไขข้อมูล</div></a>
 
             <a onClick={handleShow} id='AccommodationDelete'><FaTrash size={40} />&nbsp; <div>ลบพาร์ทเนอร์</div></a>
             <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} className="modal">

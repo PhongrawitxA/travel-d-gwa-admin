@@ -5,10 +5,9 @@ import './RentcarAction.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Button, Modal, render} from 'react-bootstrap';
 
-import { AiFillInfoCircle } from 'react-icons/ai'
-import { IoChatboxEllipses } from 'react-icons/io5'
+import { AiFillInfoCircle, AiFillEdit } from 'react-icons/ai'
 import { FaTrash } from 'react-icons/fa'
-import {SampleContext} from '../../contexts/SampleContext';
+import { SampleContext} from '../../contexts/SampleContext';
 
 
 
@@ -30,12 +29,12 @@ export const RentcarAction = ({id}) => {
     return (
         <td id='Button'>
             <a href={'rentcar-partner/info-1/' + id.original._id} id='RentcarInfo'><AiFillInfoCircle size={40} />&nbsp; <div>ดูข้อมูล</div></a>
-            <a href={'rentcar-partner/info-1/' + id.original._id} id='RentcarMessage'><IoChatboxEllipses size={40} />&nbsp; <div>ส่งการแจ้งเตือน</div></a>
+            <a href={'rentcar-partner/info-1/' + id.original._id} id='RentcarEdit'><AiFillEdit size={40} />&nbsp; <div>แก้ไขข้อมูล</div></a>
 
             <a onClick={handleShow} id='RentcarDelete'><FaTrash size={40} />&nbsp; <div>ลบพาร์ทเนอร์</div></a>
             <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} className="modal">
                 <Modal.Header className="modalHeader">
-                    <Modal.Title className="modalTitle">คุณต้องการลบพาร์ทเนอร์กิจกรรม ?</Modal.Title>
+                    <Modal.Title className="modalTitle">คุณต้องการลบพาร์ทเนอร์เช่ารถ ?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modalBody">
                     ชื่อผู้ใช้ : {id.original.usernameID.realname + ' ' + id.original.usernameID.surname} <br/>

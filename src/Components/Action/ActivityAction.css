@@ -1,4 +1,4 @@
-#ActivityInfo {
+/* #ActivityInfo {
     flex: 30%;
 }
 
@@ -8,23 +8,27 @@
 
 #ActivityDelete {
     flex: 35%;
-}
+} */
 
-#ActivityInfo, #ActivityMessage, #ActivityDelete {
+#ActivityInfo, #ActivityEdit, #ActivityDelete {
     cursor: pointer !important;
+    transition: all .1s ease-in-out;
 }
 
-#ActivityInfo:hover, #ActivityMessage:hover, #ActivityDelete:hover {
+#ActivityInfo:hover, #ActivityEdit:hover, #ActivityDelete:hover {
     cursor: pointer !important;
     color: #3C6E71;
 }
 
-#ActivityRealname {
-    width: 30%;
+th#ActivityRealname, th#ActivitySurname, th#ActivityEmail {
+    width: 300px;
 }
 
-#ActivityEmail {
-    width: 30%;
+td.ActivityRealname, td.ActivitySurname, td.ActivityEmail {
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .modal {

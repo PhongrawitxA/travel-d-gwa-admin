@@ -26,6 +26,8 @@ table th {
     align-items: center;
     text-align: left;
     padding: 30px 20px 20px 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 table span {
@@ -34,7 +36,7 @@ table span {
     vertical-align: middle;
 }
 
-table td {
+table tr td {
     padding: 12px 15px 12px 20px;
 }
 
@@ -53,9 +55,12 @@ table a {
 table #Button {
     display: flex;
     justify-content: space-evenly;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-table #Number {
+table th#Number {
     display: flex;
     width: 65px;
 }
