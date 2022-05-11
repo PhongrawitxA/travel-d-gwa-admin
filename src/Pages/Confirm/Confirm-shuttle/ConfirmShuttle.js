@@ -27,7 +27,7 @@ export const ConfirmShuttle = () => {
 
   return (
     <div>
-        <Table header={'อนุมัติพาร์ทเนอร์รถ รับ - ส่ง'} data={data} column={COLUMNS} Action={ConfirmShuttleAction} />                   
+        <Table header={'อนุมัติพาร์ทเนอร์รถ รับ - ส่ง'} data={data} column={COLUMNS} Action={ConfirmShuttleAction} />                    
     </div>
   )
 }

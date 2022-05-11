@@ -1,4 +1,4 @@
-.receipt-activity .view-receipt {
+.view-receipt {
     font-size: 14px;
     color: #1D3557;
     padding: 8px 24px;
@@ -9,60 +9,60 @@
     transition: all .2s ease-in-out;
 }
 
-.receipt-activity .view-receipt:hover {
+.view-receipt:hover {
     color: #fff;
     background-color: #3C6E71;
 }
 
-#Realname {
-    width: 200px;
+th#Realname, th#Surname, th#Email{
+    width: 250px;
 }
 
-#Surname {
-    width: 240px;
+th#Date-time {
+    text-align: center;
+    width: 250px;
 }
 
-#Email {
-    width: 240px;
-}
-
-#Date-time {
+th#Total {
     text-align: center;
     width: 200px;
 }
 
-#Total {
-    text-align: center;
-    width: 200px;
+.Total{
+    text-align: center
 }
 
-.receipt-activity .modal {
+.Total::after {
+    content: ' THB-.';
+}
+
+.modal {
     padding-top: 15%;
 }
 
-.receipt-activity .modalHeader {
+.modalHeader {
     justify-content: center;
     border: none;
 }
 
-.receipt-activity .modalTitle {
+.modalTitle {
     padding-top: 15px;
     font-weight: bold;
     color: #1D3557;
 }
 
-.receipt-activity .modalBody {
+.modalBody {
     padding: 30px 50px 40px 50px;
     font-size: 18px;
 }
 
-.receipt-activity .modalFooter {
+.modalFooter {
     border: none;
     padding: 0 80px 20px 80px;
     justify-content: space-between;
 }
 
-.receipt-activity .modalButtonPrimary, .modalButtonSecondary {
+.modalButtonPrimary, .modalButtonSecondary {
     height: 50px;
     width: 150px;
     border-radius: 12px;
@@ -71,18 +71,18 @@
     border: none;
 }
 
-.receipt-activity .modalButtonPrimary {
+.modalButtonPrimary {
     background-color: #3C6E71;
 }
 
-.receipt-activity .modalButtonSecondary {
+.modalButtonSecondary {
     background-color: #F25B52;
 }
 
-.receipt-activity .modalButtonPrimary:hover {
+.modalButtonPrimary:hover {
     background-color: #2f5658;
 }
 
-.receipt-activity .modalButtonSecondary:hover {
+.modalButtonSecondary:hover {
     background-color: #be4a44;
 }

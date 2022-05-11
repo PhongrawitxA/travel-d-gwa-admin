@@ -115,3 +115,13 @@ table #Action {
 .Button {
     padding-left: 15px;
 }
+
+.empty {
+    height: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
