@@ -25,7 +25,7 @@ function Topbar() {
               <ul>
                 {/* <li><AccountCircleOutlinedIcon className='Icon' /><a href='#'>โปรไฟล์</a></li>
                 <li><HelpOutlineOutlinedIcon className='Icon' /><a href='#'>ความช่วยเหลือ</a></li> */}
-                <li><LogoutOutlinedIcon className='Icon' /><a href='#'>ออกจากระบบ</a></li>
+                <li><LogoutOutlinedIcon className='Icon' /><a href='/'>ออกจากระบบ</a></li>
               </ul>
             </div>
           </div>
