@@ -27,7 +27,11 @@ export const ConfirmAccommodation = () => {
 
   return (
     <div>
-        <Table header={'อนุมัติพาร์ทเนอร์ที่พัก'} data={data} column={COLUMNS} Action={ConfirmAccommodationAction} />                   
+        <Table header={'อนุมัติพาร์ทเนอร์ที่พัก'} data={data} column={COLUMNS} Action={ConfirmAccommodationAction} /> 
+        {data === [] 
+        ? <div>It's empty</div>
+        : ""
+        }                  
     </div>
   )
 }

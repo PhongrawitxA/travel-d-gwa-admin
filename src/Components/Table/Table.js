@@ -7,6 +7,7 @@ import './Table.css'
 
 import { FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 import { RiArrowUpSLine, RiArrowDownSLine } from 'react-icons/ri'
+import { BsQuestionCircleFill } from 'react-icons/bs'
 
 export const Table = ({data, column, header, Action}) => {
     
@@ -78,8 +79,12 @@ export const Table = ({data, column, header, Action}) => {
                                 )
                             })
                         }
+                        {data.length == 0
+                        ? <tr><td colspan="10"><div className='empty'>ไม่มีข้อมูล &nbsp;<BsQuestionCircleFill /></div></td></tr>
+                        : ""
+                        }
                     </tbody>
-                </table>      
+                </table>
                 <div className='Footer'>
                     <span>
                         หน้าที่ &nbsp;
