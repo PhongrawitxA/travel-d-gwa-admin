@@ -5,18 +5,23 @@ export const COLUMNS = [
         IdName: 'Number'
     },
     {
+        Header: 'ชื่อสถานที่',
+        accessor: 'name',
+        IdName: 'ActivityName'
+    },
+    {
         Header: 'ชื่อผู้ใช้',
-        accessor: 'realname',
+        accessor: 'usernameID.realname',
         IdName: 'ConfirmRealname'
     },
     {
         Header: 'นามสกุล',
-        accessor: 'surname',
+        accessor: 'usernameID.surname',
         IdName: 'ConfirmSurname'
     },
     {
         Header: 'อีเมล',
-        accessor: 'email',
+        accessor: 'usernameID.email',
         IdName: 'ConfirmEmail'
     },
 ]
