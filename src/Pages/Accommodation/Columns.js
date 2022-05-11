@@ -10,6 +10,11 @@ export const COLUMNS = [
         IdName: 'AccommodationRealname'
     },
     {
+        Header: 'นามสกุล',
+        accessor: 'surname',
+        IdName: 'AccommodationSurname'
+    },
+    {
         Header: 'อีเมล',
         accessor: 'email',
         IdName: 'AccommodationEmail'

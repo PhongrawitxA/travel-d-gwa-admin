@@ -70,7 +70,7 @@ export const Table = ({data, column, header, Action}) => {
                                     <tr {...row.getRowProps()}>
                                         {
                                             row.cells.map( cell => {
-                                                return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                                                return <td {...cell.getCellProps()} class={cell.render('IdName')} >{cell.render('Cell')}</td>
                                             })
                                         }
                                         {<Action id={page[index]} />}                            

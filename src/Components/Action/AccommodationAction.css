@@ -1,4 +1,4 @@
-#AccommodationInfo {
+/* #AccommodationInfo {
     flex: 30%;
 }
 
@@ -8,23 +8,26 @@
 
 #AccommodationDelete {
     flex: 35%;
-}
+} */
 
-#AccommodationInfo, #AccommodationMessage, #AccommodationDelete {
+#AccommodationInfo, #AccommodationEdit, #AccommodationDelete {
     cursor: pointer !important;
 }
 
-#AccommodationInfo:hover, #AccommodationMessage:hover, #AccommodationDelete:hover {
+#AccommodationInfo:hover, #AccommodationEdit:hover, #AccommodationDelete:hover {
     cursor: pointer !important;
     color: #3C6E71;
 }
 
-#AccommodationRealname {
-    width: 30%;
+th#AccommodationRealname, th#AccommodationSurname, th#AccommodationEmail {
+    width: 300px;
 }
 
-#AccommodationEmail {
-    width: 30%;
+td.AccommodationRealname, td.AccommodationSurname, td.AccommodationEmail {
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .modal {

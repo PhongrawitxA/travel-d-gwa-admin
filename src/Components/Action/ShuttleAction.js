@@ -5,8 +5,7 @@ import './ShuttleAction.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Button, Modal, render} from 'react-bootstrap';
 
-import { AiFillInfoCircle } from 'react-icons/ai'
-import { IoChatboxEllipses } from 'react-icons/io5'
+import { AiFillInfoCircle, AiFillEdit } from 'react-icons/ai'
 import { FaTrash } from 'react-icons/fa'
 import {SampleContext} from '../../contexts/SampleContext';
 
@@ -29,7 +28,7 @@ export const ShuttleAction = ({id}) => {
     return (
         <td id='Button'>
             <a href={'shuttle-partner/info-1/' + id.original._id} id='ShuttleInfo'><AiFillInfoCircle size={40} />&nbsp; <div>ดูข้อมูล</div></a>
-            <a href={'shuttle-partner/info-1/' + id.original._id} id='ShuttleMessage'><IoChatboxEllipses size={40} />&nbsp; <div>ส่งการแจ้งเตือน</div></a>
+            <a href={'shuttle-partner/info-1/' + id.original._id} id='ShuttleEdit'><AiFillEdit size={40} />&nbsp; <div>แก้ไขข้อมูล</div></a>
 
             <a onClick={handleShow} id='ShuttleDelete'><FaTrash size={40} />&nbsp; <div>ลบพาร์ทเนอร์</div></a>
             <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} className="modal">

@@ -7,12 +7,12 @@ export const COLUMNS = [
     {
         Header: 'ชื่อผู้ใช้',
         accessor: 'usernameID.realname',
-        IdName: 'RentcarRealname'
+        IdName: 'ShuttleRealname'
     },
     {
         Header: 'นามสกุล',
         accessor: 'usernameID.surname',
-        IdName: 'RentcarSurname'
+        IdName: 'ShuttleSurname'
     },
     {
         Header: 'อีเมล',

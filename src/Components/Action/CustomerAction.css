@@ -1,34 +1,33 @@
-#CustomerInfo {
-    flex: 25%
+/* #CustomerInfo {
+    flex: 30%;
+}
+
+#CustomerMessage {
+    flex: 35%;
 }
 
 #CustomerDelete {
-    flex: 25%
-}
+    flex: 35%;
+} */
 
-#CustomerUpgrade {
-    flex: 40%;
-}
-
-#CustomerInfo, #CustomerDelete, #CustomerUpgrade{
+#CustomerInfo, #CustomerUpgrade, #CustomerDelete {
     cursor: pointer !important;
 }
 
-#CustomerInfo:hover, #CustomerDelete:hover, #CustomerUpgrade:hover{
+#CustomerInfo:hover, #CustomerUpgrade:hover, #CustomerDelete:hover {
     cursor: pointer !important;
     color: #3C6E71;
 }
 
-#CustomerRealname {
-    width: 250px;
+th#CustomerRealname, th#CustomerSurname, th#CustomerEmail {
+    width: 280px;
 }
 
-#CustomerSurname {
-    width: 250px;
-}
-
-#CustomerEmail {
-    width: 300px;
+td.CustomerRealname, td.CustomerSurname, td.CustomerEmail {
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .modal {

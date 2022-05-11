@@ -1,15 +1,3 @@
-#Info {
-    flex: 33%
-}
-
-#Decline {
-    flex: 33%
-}
-
-#Accept {
-    flex: 33%;
-}
-
 #Info, #Decline, #Accept{
     cursor: pointer !important;
 }
@@ -19,16 +7,30 @@
     color: #3C6E71;
 }
 
-#Realname {
-    width: 250px;
+th#ConfirmRentcarName, th#ConfirmRentcarEmail {
+    width: 360px;
 }
 
-#Surname {
-    width: 250px;
+th#ConfirmRentcarPhone {
+    width: 150px;
 }
 
-#Email {
+td.ConfirmRentcarName, td.ConfirmRentcarEmail {
+    max-width: 360px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th#ConfirmRealname, th#ConfirmSurname, th#ConfirmEmail {
     width: 300px;
+}
+
+td.ConfirmRealname, td.ConfirmSurname, td.ConfirmEmail {
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .modal {

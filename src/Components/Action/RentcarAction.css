@@ -1,30 +1,37 @@
-#RentcarInfo {
-    flex: 30%;
+/* #RentcarInfo {
+    background-color: #fff;
 }
 
-#RentcarMessage {
-    flex: 35%;
+#RentcarEdit {
+    background-color: #fff;
 }
 
 #RentcarDelete {
-    flex: 35%;
-}
+    background-color: #fff;
+} */
 
-#RentcarInfo, #RentcarMessage, #RentcarDelete {
+#RentcarInfo, #RentcarEdit, #RentcarDelete {
     cursor: pointer !important;
 }
 
-#RentcarInfo:hover, #RentcarMessage:hover, #RentcarDelete:hover {
+#RentcarInfo:hover, #RentcarEdit:hover, #RentcarDelete:hover {
     cursor: pointer !important;
     color: #3C6E71;
 }
 
-#RentcarRealname, #RentcarSurname {
-    width: 15%;
+th#RentcarName, th#RentcarEmail {
+    width: 360px;
 }
 
-#RentcarEmail {
-    width: 30%;
+th#RentcarPhone {
+    width: 150px;
+}
+
+td.RentcarName, td.RentcarEmail {
+    max-width: 360px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .modal {

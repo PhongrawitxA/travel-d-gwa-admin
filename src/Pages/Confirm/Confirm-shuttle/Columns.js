@@ -7,16 +7,16 @@ export const COLUMNS = [
     {
         Header: 'ชื่อผู้ใช้',
         accessor: 'usernameID.realname',
-        IdName: 'Realname'
+        IdName: 'ConfirmRealname'
     },
     {
         Header: 'นามสกุล',
         accessor: 'usernameID.surname',
-        IdName: 'Surname'
+        IdName: 'ConfirmSurname'
     },
     {
         Header: 'อีเมล',
         accessor: 'email',
-        IdName: 'Email'
+        IdName: 'ConfirmEmail'
     },
 ]

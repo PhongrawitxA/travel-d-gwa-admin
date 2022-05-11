@@ -1,6 +1,6 @@
 import React ,{ useState } from 'react'
 import axios from "axios";
-import './ConfirmAccommodationAction.css'
+import './ConfirmAction.css'
 
 import { Button, Modal, render} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
