@@ -1,4 +1,4 @@
-import React ,{ useState } from 'react'
+import React ,{ useState , useContext } from 'react'
 import axios from "axios";
 import './ConfirmRentcarAction.css'
 
@@ -7,8 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { AiFillInfoCircle } from 'react-icons/ai'
 import { FaTrash, FaWindowClose, FaCheckSquare } from 'react-icons/fa'
+import { SampleContext } from '../../../contexts/SampleContext';
 
 export const ConfirmRentcarAction = ({id}) => {
+    const {Url} = useContext(SampleContext);
 
     const [show, setShow] = useState(false);
 
@@ -19,6 +21,24 @@ export const ConfirmRentcarAction = ({id}) => {
   
     const handleClose2 = () => setShow2(false);
     const handleShow2 = () => setShow2(true);
+
+    const approveRentcarPartner = (id) => {
+        axios({
+            method : "PUT",
+            url: Url+"/admin/rentcarregister/approve/" + id,
+          }).then( res => {
+            window.location.href='/confirm-partner/rentcar';
+          });
+    }
+
+    const rejectRentcarPartner = (id) => {
+        axios({
+            method : "DELETE",
+            url: Url+"/admin/rentcarregister/reject/" + id,
+          }).then( res => {
+            window.location.href='/confirm-partner/rentcar';
+          });
+    }
 
   return (
     <td id='Button'>
@@ -31,12 +51,12 @@ export const ConfirmRentcarAction = ({id}) => {
                     <Modal.Title  className="modalTitle">คุณต้องการปฏิเสธพาร์ทเนอร์เช่ารถ ?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modalBody">
-                    ชื่อผู้ใช้ : {id.original.realname} <br/>
+                    ชื่อผู้ใช้ : {id.original.usernameID.realname + ' ' + id.original.usernameID.surname} <br/>
                     อีเมล : {id.original.email}
                 </Modal.Body>
                 <Modal.Footer className="modalFooter">
                     <Button variant="secondary" className="modalButtonSecondary" onClick={handleClose}>ยกเลิก</Button>
-                    <Button variant="primary" className="modalButtonPrimary" onClick={handleClose}>ยืนยัน</Button>
+                    <Button variant="primary" className="modalButtonPrimary" onClick={() => {rejectRentcarPartner(id.original._id)}}>ยืนยัน</Button>
                 </Modal.Footer>
             </Modal>
         </>
@@ -48,12 +68,12 @@ export const ConfirmRentcarAction = ({id}) => {
                     <Modal.Title  className="modalTitle">คุณต้องการอนุมัติพาร์ทเนอร์เช่ารถ ?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modalBody">
-                    ชื่อผู้ใช้ : {id.original.realname} <br/>
+                    ชื่อผู้ใช้ : {id.original.usernameID.realname + ' ' + id.original.usernameID.surname} <br/>
                     อีเมล : {id.original.email}
                 </Modal.Body>
                 <Modal.Footer className="modalFooter">
                     <Button variant="secondary" className="modalButtonSecondary" onClick={handleClose2}>ยกเลิก</Button>
-                    <Button variant="primary" className="modalButtonPrimary" onClick={handleClose2}>ยืนยัน</Button>
+                    <Button variant="primary" className="modalButtonPrimary" onClick={() => {approveRentcarPartner(id.original._id)}}>ยืนยัน</Button>
                 </Modal.Footer>
             </Modal>
         </>

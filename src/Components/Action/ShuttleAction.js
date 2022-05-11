@@ -1,4 +1,4 @@
-import React ,{ useState } from 'react'
+import React ,{ useState ,useContext } from 'react'
 import axios from "axios";
 
 import './ShuttleAction.css'
@@ -8,20 +8,21 @@ import { Button, Modal, render} from 'react-bootstrap';
 import { AiFillInfoCircle } from 'react-icons/ai'
 import { IoChatboxEllipses } from 'react-icons/io5'
 import { FaTrash } from 'react-icons/fa'
+import {SampleContext} from '../../contexts/SampleContext';
 
 
 export const ShuttleAction = ({id}) => {
-
+    const {Url} = useContext(SampleContext)
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const deleteUser = (id) => {
+    const deleteShuttlePartner = (id) => {
         axios({
             method : "DELETE",
-            url: "http://localhost:8080/admin/deleteuser/" + id,
+            url: Url+"/admin/deleteshuttlepartner/" + id,
           }).then( res => {
-            window.location.href='/customer';
+            window.location.href='/shuttle-partner';
           });
     }
  
@@ -36,12 +37,12 @@ export const ShuttleAction = ({id}) => {
                     <Modal.Title className="modalTitle">คุณต้องการลบพาร์ทเนอร์กิจกรรม ?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modalBody">
-                    ชื่อผู้ใช้ : {id.original.realname} <br/>
+                    ชื่อผู้ใช้ : {id.original.usernameID.realname + ' ' + id.original.usernameID.surname} <br/>
                     อีเมล : {id.original.email}
                 </Modal.Body>
                 <Modal.Footer className="modalFooter">
                     <Button variant="secondary" className="modalButtonSecondary" onClick={handleClose}>ยกเลิก</Button>
-                    <Button variant="primary" className="modalButtonPrimary" onClick={() => {deleteUser(id.original._id)}}>ยืนยัน</Button>
+                    <Button variant="primary" className="modalButtonPrimary" onClick={() => {deleteShuttlePartner(id.original._id)}}>ยืนยัน</Button>
                 </Modal.Footer>
             </Modal>
         </td> 

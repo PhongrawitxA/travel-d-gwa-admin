@@ -1,4 +1,4 @@
-import React ,{ useState } from 'react'
+import React ,{ useState , useContext } from 'react'
 import axios from "axios";
 import './ConfirmShuttleAction.css'
 
@@ -7,8 +7,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import { AiFillInfoCircle } from 'react-icons/ai'
 import { FaTrash, FaWindowClose, FaCheckSquare } from 'react-icons/fa'
+import { SampleContext } from '../../../contexts/SampleContext';
 
 export const ConfirmShuttleAction = ({id}) => {
+
+    const {Url} = useContext(SampleContext)
 
     const [show, setShow] = useState(false);
 
@@ -19,6 +22,24 @@ export const ConfirmShuttleAction = ({id}) => {
   
     const handleClose2 = () => setShow2(false);
     const handleShow2 = () => setShow2(true);
+
+    const approveShuttlePartner = (id) => {
+        axios({
+            method : "PUT",
+            url: Url+"/admin/shuttleregister/approve/" + id,
+          }).then( res => {
+            window.location.href='/confirm-partner/shuttle';
+          });
+    }
+
+    const rejectShuttlePartner = (id) => {
+        axios({
+            method : "DELETE",
+            url: Url+"/admin/shuttleregister/reject/" + id,
+          }).then( res => {
+            window.location.href='/confirm-partner/shuttle';
+          });
+    }
 
   return (
     <td id='Button'>
@@ -31,12 +52,12 @@ export const ConfirmShuttleAction = ({id}) => {
                     <Modal.Title  className="modalTitle">คุณต้องการปฏิเสธพาร์ทเนอร์รถ รับ - ส่ง ?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modalBody">
-                    ชื่อผู้ใช้ : {id.original.realname} <br/>
+                    ชื่อผู้ใช้ : {id.original.usernameID.realname + ' ' + id.original.usernameID.surname} <br/>
                     อีเมล : {id.original.email}
                 </Modal.Body>
                 <Modal.Footer className="modalFooter">
                     <Button variant="secondary" className="modalButtonSecondary" onClick={handleClose}>ยกเลิก</Button>
-                    <Button variant="primary" className="modalButtonPrimary" onClick={handleClose}>ยืนยัน</Button>
+                    <Button variant="primary" className="modalButtonPrimary" onClick={() => {rejectShuttlePartner(id.original._id)}}>ยืนยัน</Button>
                 </Modal.Footer>
             </Modal>
         </>
@@ -48,12 +69,12 @@ export const ConfirmShuttleAction = ({id}) => {
                     <Modal.Title  className="modalTitle">คุณต้องการอนุมัติพาร์ทเนอร์รถ รับ - ส่ง ?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="modalBody">
-                    ชื่อผู้ใช้ : {id.original.realname} <br/>
+                    ชื่อผู้ใช้ : {id.original.usernameID.realname + ' ' + id.original.usernameID.surname} <br/>
                     อีเมล : {id.original.email}
                 </Modal.Body>
                 <Modal.Footer className="modalFooter">
                     <Button variant="secondary" className="modalButtonSecondary" onClick={handleClose2}>ยกเลิก</Button>
-                    <Button variant="primary" className="modalButtonPrimary" onClick={handleClose2}>ยืนยัน</Button>
+                    <Button variant="primary" className="modalButtonPrimary" onClick={()=>{approveShuttlePartner(id.original._id)}}>ยืนยัน</Button>
                 </Modal.Footer>
             </Modal>
         </>

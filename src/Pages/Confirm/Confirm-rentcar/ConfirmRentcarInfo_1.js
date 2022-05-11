@@ -17,14 +17,13 @@ export const ConfirmRentcarInfo_1 = () => {
 
     const {id} = useParams();
     const [data,setData] = useState([]);
-    const [info,setInfo] = useState([]);
 
     const getPartnerInfo = (id) => {
         axios({
             method : "GET",
             url: Url + "/admin/getrentcarpartner/" + id,
         }).then( res => {
-                setData(res.data);
+                setData(res.data[0]);
         });
     }
 
@@ -44,6 +43,24 @@ export const ConfirmRentcarInfo_1 = () => {
     const handleClose2 = () => setShow2(false);
     const handleShow2 = () => setShow2(true);
 
+    const approveRentcarPartner = (id) => {
+        axios({
+            method : "PUT",
+            url: Url+"/admin/rentcarregister/approve/" + id,
+          }).then( res => {
+            window.location.href='/confirm-partner/rentcar';
+          });
+    }
+
+    const rejectRentcarPartner = (id) => {
+        axios({
+            method : "DELETE",
+            url: Url+"/admin/rentcarregister/reject/" + id,
+          }).then( res => {
+            window.location.href='/confirm-partner/rentcar';
+          });
+    }
+
     return (
         <div className='ConfirmRentcar-info-1'>
             <div className='Head'>
@@ -60,12 +77,12 @@ export const ConfirmRentcarInfo_1 = () => {
                                 <Modal.Title  className="modalTitle">คุณต้องการปฏิเสธพาร์ทเนอร์เช่ารถ ?</Modal.Title>
                             </Modal.Header>
                             <Modal.Body className="modalBody">
-                                ชื่อผู้ใช้ : {info.realname} <br/>
-                                อีเมล : {info.email}
+                                ชื่อผู้ใช้ : {data.nameOfUser} <br/>
+                                อีเมล : {(data.PartnerID || []).email}
                             </Modal.Body>
                             <Modal.Footer className="modalFooter">
                                 <Button variant="secondary" className="modalButtonSecondary" onClick={handleClose}>ยกเลิก</Button>
-                                <Button variant="primary" className="modalButtonPrimary" onClick={handleClose}>ยืนยัน</Button>
+                                <Button variant="primary" className="modalButtonPrimary" onClick={() => {rejectRentcarPartner(id)}}>ยืนยัน</Button>
                             </Modal.Footer>
                         </Modal>
                     </>
@@ -77,12 +94,12 @@ export const ConfirmRentcarInfo_1 = () => {
                                 <Modal.Title  className="modalTitle">คุณต้องการอนุมัติพาร์ทเนอร์เช่ารถ ?</Modal.Title>
                             </Modal.Header>
                             <Modal.Body className="modalBody">
-                                ชื่อผู้ใช้ : {info.realname} <br/>
-                                อีเมล : {info.email}
+                                ชื่อผู้ใช้ : {data.nameOfUser} <br/>
+                                อีเมล : {(data.PartnerID || []).email}
                             </Modal.Body>
                             <Modal.Footer className="modalFooter">
                                 <Button variant="secondary" className="modalButtonSecondary" onClick={handleClose2}>ยกเลิก</Button>
-                                <Button variant="primary" className="modalButtonPrimary" onClick={handleClose2}>ยืนยัน</Button>
+                                <Button variant="primary" className="modalButtonPrimary" onClick={() => {approveRentcarPartner(id)}}>ยืนยัน</Button>
                             </Modal.Footer>
                         </Modal>
                     </>
@@ -93,23 +110,23 @@ export const ConfirmRentcarInfo_1 = () => {
                     <div className='Detail'>
                         <h4>ข้อมูลบริษัท</h4>
                         <ul className='Info-text'>
-                            <li className='Row'><div className='Title'>ชื่อบริษัท</div><div className='User-info'>{''}</div></li>
-                            <li className='Row'><div className='Title'>ที่อยู่บริษัท</div><div className='User-info'>{'ที่อยู่'}</div></li>
-                            <li className='Row'><div className='Title'>ชื่อผู้ใช้</div><div className='User-info'>{info.realname}</div></li>
-                            <li className='Row'><div className='Title'>นามสกุล</div><div className='User-info'>{info.surname}</div></li>
-                            <li className='Row'><div className='Title'>อีเมล</div><div className='User-info'>{''}</div></li>
-                            <li className='Row'><div className='Title'>เบอร์โทรศัพท์</div><div className='User-info'>{''}</div></li>
+                            <li className='Row'><div className='Title'>ชื่อบริษัท</div><div className='User-info'>{data.car_partnername}</div></li>
+                            <li className='Row'><div className='Title'>ที่อยู่บริษัท</div><div className='User-info'>{data.car_location}</div></li>
+                            <li className='Row'><div className='Title'>ชื่อผู้ใช้</div><div className='User-info'>{data.nameOfUser}</div></li>
+                            {/* <li className='Row'><div className='Title'>นามสกุล</div><div className='User-info'>{'info.surname'}</div></li> */}
+                            <li className='Row'><div className='Title'>อีเมล</div><div className='User-info'>{(data.PartnerID || []).email}</div></li>
+                            <li className='Row'><div className='Title'>เบอร์โทรศัพท์</div><div className='User-info'>{(data.PartnerID || []).phone}</div></li>
                         </ul>     
                     </div>
                 </div> 
                 <div className='Right'>
                 <h4>ข้อมูลเกี่ยวรถ รับ - ส่ง</h4>
                     <ul className='Info-text'>
-                        <li className='Row'><div className='Title'>รุ่นของรถ</div><div className='User-info'>{'Honda'}</div></li>
-                        <li className='Row'><div className='Title'>จำนวน</div><div className='User-info'>{'10 คัน'}</div></li>
-                        <li className='Row'><div className='Title'>ราคาต่อวัน</div><div className='User-info'>{'THB 2,200'}</div></li>
-                        <li className='Row'><div className='Title'>ข้อมูลรถ</div><div className='User-info'>ปีจดทะเบียน {'2020'} <br/> จำนวนผู้โดยสาร {'4'} <br/> กระเป๋าใบใหญ่ {'1'} <br/> กระเป๋าใบเล็ก {'2'}</div></li>
-                        <li className='Row'><div className='Title'>อุปกรณ์ภายในรถ</div><div className='User-info'>{'FM/AM Radio, Bluetooth, USB/AUX, CD/MP3'}</div></li>
+                        <li className='Row'><div className='Title'>รุ่นของรถ</div><div className='User-info'>{data.car_brand + ' ' +data.car_name}</div></li>
+                        <li className='Row'><div className='Title'>จำนวน</div><div className='User-info'>{data.car_counting+' คัน'}</div></li>
+                        <li className='Row'><div className='Title'>ราคาต่อวัน</div><div className='User-info'>{'THB '+data.car_price}</div></li>
+                        <li className='Row'><div className='Title'>ข้อมูลรถ</div><div className='User-info'>ปีจดทะเบียน {data.car_registration_year} <br/> จำนวนผู้โดยสาร {data.car_nunber_sit} <br/> กระเป๋าใบใหญ่ {data.car_nunber_bigbag} <br/> กระเป๋าใบเล็ก {data.car_nunber_smallbag}</div></li>
+                        <li className='Row'><div className='Title'>อุปกรณ์ภายในรถ</div><div className='User-info'>{(data.car_service || []).map((item) => {return <div>{item}</div>})}</div></li>
                     </ul>    
                 </div>   
             </div>       

@@ -11,17 +11,17 @@ export const ConfirmShuttle = () => {
   const {Url} = useContext(SampleContext)
 
   const [data, setData] = useState([]); 
-  const getUser = () => {
+  const getShuttleRegister = () => {
       axios({
           method : "GET",
-          url: Url + "/admin/getuser",
+          url: Url + "/admin/getshuttleregister",
         }).then( res => {
               setData(res.data);
         });
   }
   useEffect(()=> {
       (async () => {
-          await getUser();
+          await getShuttleRegister();
       })();
   },[]);
 
