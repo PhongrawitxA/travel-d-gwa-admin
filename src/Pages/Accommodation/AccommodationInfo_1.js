@@ -43,7 +43,7 @@ export const AccommodationInfo_1 = () => {
                 </h2>
                 <div className='Button'>
                     <>
-                        <a className='Edit'><AiFillEdit size={40} />&nbsp; <div>แก้ไขข้อมูล</div></a>
+                        <a className='Edit' href={"/accommodation-partner/edit/info-1/" + id} ><AiFillEdit size={40} />&nbsp; <div>แก้ไขข้อมูล</div></a>
                     </>
                     <>
                         <a onClick={handleShow} className='Delete'><FaTrash size={40} />&nbsp; <div>ลบพาร์ทเนอร์</div></a>

@@ -45,7 +45,7 @@ export const RentcarInfo_1 = () => {
                 </h2>
                 <div className='Button'>
                     <>
-                        <a className='Edit'><AiFillEdit size={40} />&nbsp; <div>แก้ไขข้อมูล</div></a>
+                        <a className='Edit' href={'/rentcar-partner/edit/info/' + id}><AiFillEdit size={40} />&nbsp; <div>แก้ไขข้อมูล</div></a>
                     </>
                     <>
                         <a onClick={handleShow} className='Delete'><FaTrash size={40} />&nbsp; <div>ลบพาร์ทเนอร์</div></a>
@@ -82,7 +82,7 @@ export const RentcarInfo_1 = () => {
                     </div>
                 </div> 
                 <div className='Right'>
-                <h4>ข้อมูลเกี่ยวรถ รับ - ส่ง</h4>
+                <h4>ข้อมูลเกี่ยวรถเช่า</h4>
                     <ul className='Info-text'>
                         <li className='Row'><div className='Title'>รุ่นของรถ</div><div className='User-info'>{carInfo.car_brand + ' ' +carInfo.car_name}</div></li>
                         <li className='Row'><div className='Title'>จำนวน</div><div className='User-info'>{carInfo.car_counting+' คัน'}</div></li>

@@ -20,11 +20,11 @@
     color: #3C6E71;
 }
 
-th#ActivityRealname, th#ActivitySurname, th#ActivityEmail {
+th#ActivityName, th#ActivityRealname, th#ActivitySurname, th#ActivityEmail {
     width: 300px;
 }
 
-td.ActivityRealname, td.ActivitySurname, td.ActivityEmail {
+td.ActivityName, td.ActivityRealname, td.ActivitySurname, td.ActivityEmail {
     max-width: 280px;
     overflow: hidden;
     text-overflow: ellipsis;
