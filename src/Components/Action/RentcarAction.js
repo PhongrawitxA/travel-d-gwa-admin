@@ -29,7 +29,7 @@ export const RentcarAction = ({id}) => {
     return (
         <td id='Button'>
             <a href={'rentcar-partner/info-1/' + id.original._id} id='RentcarInfo'><AiFillInfoCircle size={40} />&nbsp; <div>ดูข้อมูล</div></a>
-            <a href={'rentcar-partner/info-1/' + id.original._id} id='RentcarEdit'><AiFillEdit size={40} />&nbsp; <div>แก้ไขข้อมูล</div></a>
+            <a href={'rentcar-partner/edit/info/' + id.original._id} id='RentcarEdit'><AiFillEdit size={40} />&nbsp; <div>แก้ไขข้อมูล</div></a>
 
             <a onClick={handleShow} id='RentcarDelete'><FaTrash size={40} />&nbsp; <div>ลบพาร์ทเนอร์</div></a>
             <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} className="modal">

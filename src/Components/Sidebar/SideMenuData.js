@@ -76,22 +76,22 @@ export const SideMenuData = [
         checkActive: "receipt-information",
         subMenu: [
             {
-                title: "พาร์ทเนอร์ที่พัก",
+                title: "ข้อมูลของที่พัก",
                 link: "/receipt-information/accommodation",
                 checkActive:"accommodation",
             },
             {
-                title: "พาร์ทเนอร์เช่ารถ",
+                title: "ข้อมูลของเช่ารถ",
                 link: "/receipt-information/rentcar",
                 checkActive:"rentcar",
             },
             {
-                title: "พาร์ทเนอร์รถ รับ - ส่ง",
+                title: "ข้อมูลของรถ รับ - ส่ง",
                 link: "/receipt-information/shuttle",
                 checkActive:"shuttle",
             },
             {
-                title: "พาร์ทเนอร์กิจกรรม",
+                title: "ข้อมูลของกิจกรรม",
                 link: "/receipt-information/activity",
                 checkActive:"activity",
             }

@@ -1,0 +1,157 @@
+.RentcarPartnerEdit-info .Head {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.RentcarPartnerEdit-info .Head .Button {
+    padding: 15px 120px 15px 60px;
+    font-weight: 100;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0px 10px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.RentcarPartnerEdit-info .Head .Button .Cancel {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+    padding: 8px 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #F25B52;
+    color: #fff;
+    transition: all .2s ease-in-out;
+}
+
+.RentcarPartnerEdit-info .Head .Button .Accept {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
+    padding: 8px 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-color: #3C6E71;
+    transition: all .2s ease-in-out;
+}
+
+.RentcarPartnerEdit-info .Head .Button .Cancel:hover {
+    background-color: #be4a44;
+}
+.RentcarPartnerEdit-info .Head .Button .Accept:hover {
+    background-color: #254647;
+}
+
+.RentcarPartnerEdit-info .Container {
+    padding: 50px;
+    margin: 30px 0 0 0;
+    height: 680px;
+    width: 96%;
+    border-radius: 20px;
+    background-color: #1D3557;
+    color: #FFF;
+    display: flex;
+}
+
+.RentcarPartnerEdit-info a {
+    cursor: pointer;
+}
+
+.RentcarPartnerEdit-info h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.RentcarPartnerEdit-info h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.RentcarPartnerEdit-info .Container .Info-text {
+    font-size: 20px;
+    color: #d9d9d9;
+    padding: 0;
+}
+
+.RentcarPartnerEdit-info .Container .Title {
+    display: grid;
+    width: 30%;
+    font-weight: bold;    
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #FFF;
+}
+
+.RentcarPartnerEdit-info .Container .User-info {
+    display: grid;
+    width: 80%;
+    height: auto;
+}
+
+.RentcarPartnerEdit-info .Container .Info .Info-text .Row {
+    padding-bottom: 50px;
+    width: 430px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.RentcarPartnerEdit-info .Container .Info-text .Row {
+    padding-bottom: 15px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.RentcarPartnerEdit-info .Container .Left {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.RentcarPartnerEdit-info .Container .Right {
+    width: 45%;
+}
+
+.RentcarPartnerEdit-info input {
+    background-color: #ECFAFF;
+    border: 0;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: 30px;
+}
+
+.RentcarPartnerEdit-info textarea {
+    background-color: #ECFAFF;
+    border: 0;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: 30px;
+}
+
+.RentcarPartnerEdit-info #car-model.User-info,
+.RentcarPartnerEdit-info #car-count.User-info,
+.RentcarPartnerEdit-info #car-price.User-info {
+    display: flex;
+    align-items: center;
+
+}
+
+.RentcarPartnerEdit-info .car-info{
+    margin: 5px 0px;
+}
+
+.RentcarPartnerEdit-info .car-name,
+.RentcarPartnerEdit-info .car-brand {
+    max-width: 180px;
+}

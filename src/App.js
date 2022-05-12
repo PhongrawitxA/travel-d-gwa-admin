@@ -27,9 +27,11 @@ import Accommodation from './Pages/Accommodation/Accommodation';
 import { AccommodationInfo_1 } from './Pages/Accommodation/AccommodationInfo_1';
 import { AccommodationInfo_2 } from './Pages/Accommodation/AccommodationInfo_2';
 import { AccommodationInfo_3 } from './Pages/Accommodation/AccommodationInfo_3';
+import { AccommodationEdit_1 } from './Pages/Accommodation/AccommodationEditInfo'
 
 import Rentcar from './Pages/Rentcar/Rentcar';
 import { RentcarInfo_1 } from './Pages/Rentcar/RentcarInfo_1'
+import { RentcarEditInfo } from './Pages/Rentcar/RentcarEditInfo'
 
 import Shuttle from './Pages/Shuttle/Shuttle';
 import { ShuttleInfo_1 } from './Pages/Shuttle/ShuttleInfo_1'
@@ -67,7 +69,7 @@ function App() {
 
               <Route path='/confirm-partner/rentcar' element={<ConfirmRentcar />} />
               <Route path='/confirm-partner/rentcar/info-1/:id' element={<ConfirmRentcarInfo_1 />} />
-
+            
               <Route path='/confirm-partner/shuttle' element={<ConfirmShuttle />} />
               <Route path='/confirm-partner/shuttle/info-1/:id' element={<ConfirmShuttleInfo_1 />} />
 
@@ -78,10 +80,11 @@ function App() {
               <Route path='/accommodation-partner/info-1/:id' element={<AccommodationInfo_1 />} />
               <Route path='/accommodation-partner/info-2/:id' element={<AccommodationInfo_2 />} />
               <Route path='/accommodation-partner/info-3/:id' element={<AccommodationInfo_3 />} />
-
+              <Route path='/accommodation-partner/edit/info-1/:id' element={<AccommodationEdit_1 />} />
 
               <Route path='/rentcar-partner' element={<Rentcar />} />
               <Route path='/rentcar-partner/info-1/:id' element={<RentcarInfo_1 />} />
+              <Route path='/rentcar-partner/edit/info/:id' element={<RentcarEditInfo />} />
 
               <Route path='/shuttle-partner' element={<Shuttle />} />
               <Route path='/shuttle-partner/info-1/:id' element={<ShuttleInfo_1 />} />
