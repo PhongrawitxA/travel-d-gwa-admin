@@ -11,17 +11,17 @@ export const ReceiptAccommodation = () => {
     const {Url} = useContext(SampleContext)
 
     const [data, setData] = useState([]); 
-    const getUser = () => {
+    const getAccommodationTransaction = () => {
         axios({
             method : "GET",
-            url: Url + "/admin/getuser",
+            url: Url + "/admin/transaction/accommodation",
           }).then( res => {
                 setData(res.data);
           });
     }
     useEffect(()=> {
         (async () => {
-            await getUser();
+            await getAccommodationTransaction();
         })();
     },[]);
 

@@ -11,17 +11,17 @@ export const ReceiptActivity = () => {
     const {Url} = useContext(SampleContext)
 
     const [data, setData] = useState([]); 
-    const getUser = () => {
+    const getActivityTransaction = () => {
         axios({
             method : "GET",
-            url: Url + "/admin/getuser",
+            url: Url + "/admin/transaction/activity",
           }).then( res => {
                 setData(res.data);
           });
     }
     useEffect(()=> {
         (async () => {
-            await getUser();
+            await getActivityTransaction();
         })();
     },[]);
 

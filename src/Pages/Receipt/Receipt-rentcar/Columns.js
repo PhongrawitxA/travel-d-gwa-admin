@@ -4,20 +4,25 @@ export const COLUMNS = [
         accessor: (_row: any, i : number) => i + 1 ,
         IdName: 'Number'
     },
-    {
-        Header: 'ชื่อผู้ใช้',
-        accessor: 'usernameID.realname',
-        IdName: 'Realname'
-    },
-    {
-        Header: 'นามสกุล',
-        accessor: 'usernameID.surname',
-        IdName: 'Surname'
-    },
+    // {
+    //     Header: 'ชื่อผู้ใช้',
+    //     accessor: 'usernameID.realname',
+    //     IdName: 'Realname'
+    // },
+    // {
+    //     Header: 'นามสกุล',
+    //     accessor: 'usernameID.surname',
+    //     IdName: 'Surname'
+    // },
     {
         Header: 'อีเมล',
         accessor: 'usernameID.email',
         IdName: 'Email'
+    },
+    {
+        Header: 'ผู้ให้บริการ',
+        accessor: 'partnername',
+        IdName: 'NamePartner'
     },
     {
         Header: 'วันที่ชำระเงิน',

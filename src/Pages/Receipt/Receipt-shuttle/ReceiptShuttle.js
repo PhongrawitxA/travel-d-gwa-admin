@@ -11,17 +11,17 @@ export const ReceiptShuttle = () => {
     const {Url} = useContext(SampleContext)
 
     const [data, setData] = useState([]); 
-    const getUser = () => {
+    const getShuttleTransaction = () => {
         axios({
             method : "GET",
-            url: Url + "/admin/getuser",
+            url: Url + "/admin/transaction/shuttle",
           }).then( res => {
                 setData(res.data);
           });
     }
     useEffect(()=> {
         (async () => {
-            await getUser();
+            await getShuttleTransaction();
         })();
     },[]);
 

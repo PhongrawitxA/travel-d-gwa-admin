@@ -6,27 +6,27 @@ export const COLUMNS = [
     },
     {
         Header: 'ชื่อผู้ใช้',
-        accessor: 'realname',
+        accessor: 'usernameId.realname',
         IdName: 'Realname'
     },
     {
         Header: 'นามสกุล',
-        accessor: 'surname',
+        accessor: 'usernameId.surname',
         IdName: 'Surname'
     },
     {
         Header: 'อีเมล',
-        accessor: 'email',
+        accessor: 'usernameId.email',
         IdName: 'Email'
     },
     {
         Header: 'วันที่ชำระเงิน',
-        accessor: 'date-time',
+        accessor: 'payDateTime',
         IdName: 'Date-time'
     },
     {
         Header: 'สรุปยอดเงิน',
-        accessor: 'total',
+        accessor: 'totalPrice',
         IdName: 'Total'
     },
 ]
